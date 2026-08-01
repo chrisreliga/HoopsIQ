@@ -1,12 +1,15 @@
 import { devinBooker } from "../data/players.js";
-import PlayerHeader from "./PlayerHeader.jsx";
+import PlayerHero from "./PlayerHero.jsx";
+import PlayerBio from "./PlayerBio.jsx";
 import PlayerContract from "./PlayerContract.jsx";
 import PlayerAnalysis from "./PlayerAnalysis.jsx";
 
 export default function PlayerDashboard() {
   return (
     <main className="container">
-      <PlayerHeader bio={devinBooker.bio} />
+      <PlayerHero bio={devinBooker.bio} />
+
+      <PlayerBio bio={devinBooker.bio} />
 
       <PlayerContract contract={devinBooker.contract} />
 

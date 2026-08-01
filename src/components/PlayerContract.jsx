@@ -1,15 +1,39 @@
+import { useState } from "react";
+
 export default function PlayerContract({ contract }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="contract-section">
-      <h2>Contract</h2>
+      <h2 className="section-header">Contract</h2>
 
-      <p>Type of Deal: {contract.type}</p>
-      <p>Salary: {contract.salary}</p>
-      <p>Length: {contract.length} seasons</p>
       <p>
-        Contract Term: {contract.startYear}-{contract.endYear}
+        <span>Type of Deal:</span> {contract.type}
       </p>
-      <p>Total Value: {contract.totalValue}</p>
+      <p>
+        <span>Salary:</span> ${contract.salary.toLocaleString()}
+      </p>
+      <p>
+        <span>Length:</span> {contract.length} seasons
+      </p>
+      <p>
+        <span>Contract Term:</span> {contract.startYear}-{contract.endYear}
+      </p>
+      <p>
+        <span>Total Value:</span> ${contract.totalValue.toLocaleString()}
+      </p>
+
+      <div className="contract-dropdowns">
+        <button className="btn" onClick={() => setIsOpen(!isOpen)}>
+          Contract Breakdown <i className="fa-solid fa-chevron-down"></i>
+        </button>
+
+        {isOpen && (
+          <p>
+            A {contract.type} deal is {contract.explanation}
+          </p>
+        )}
+      </div>
     </section>
   );
 }
