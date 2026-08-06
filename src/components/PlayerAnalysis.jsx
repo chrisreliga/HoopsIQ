@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-export default function PlayerAnalysis({ analysis }) {
+export default function PlayerAnalysis({ analysis, isScrolled }) {
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
 
   return (
-    <section>
-      <h2 className="section-header">Deep Dive</h2>
-      <h3 className="analysis-headline">{analysis.headline}</h3>
-      <p>
-        <span>Contract Rating:</span> {analysis.contractRating}
-      </p>
+    <section className={isScrolled ? "visible" : ""}>
+      <h2 className="analysis-headline">
+        <span>Final Grade:</span> {analysis.contractRating}
+      </h2>
 
-      <div className="analysis-dropdowns">
+      <div className="analysis-dropdown">
         <button
-          className="btn analysis-btns"
+          className="btn analysis-btn"
           onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}
         >
-          Show Contract Deep Dive <i className="fa-solid fa-chevron-down"></i>
+          Deep Dive <i className="fa-solid fa-chevron-right"></i>
         </button>
 
-        {isDeepDiveOpen && <p>{analysis.deepDive}</p>}
+        {isDeepDiveOpen && (
+          <p className="analysis-deepdive">{analysis.deepDive}</p>
+        )}
       </div>
     </section>
   );

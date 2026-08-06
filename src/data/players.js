@@ -1,4 +1,5 @@
 import devinBookerImage from "../assets/devinbooker.jpeg";
+import SunsLogo from "../assets/sunslogo.png";
 
 export const devinBooker = {
   sport: "NBA",
@@ -6,7 +7,8 @@ export const devinBooker = {
   bio: {
     name: "Devin Booker",
     team: "Phoenix Suns",
-    image: devinBookerImage,
+    playerImage: devinBookerImage,
+    teamLogo: SunsLogo,
     age: 29,
     country: "USA",
     height: "6'5\"",

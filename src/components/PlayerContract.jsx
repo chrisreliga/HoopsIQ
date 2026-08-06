@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function PlayerContract({ contract }) {
+export default function PlayerContract({ contract, isScrolled }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="contract-section">
+    <section className={isScrolled ? "visible" : ""}>
       <h2 className="section-header">Contract</h2>
 
       <p>
@@ -23,13 +23,13 @@ export default function PlayerContract({ contract }) {
         <span>Total Value:</span> ${contract.totalValue.toLocaleString()}
       </p>
 
-      <div className="contract-dropdowns">
+      <div className="contract-dropdown">
         <button className="btn" onClick={() => setIsOpen(!isOpen)}>
-          Contract Breakdown <i className="fa-solid fa-chevron-down"></i>
+          Contract Breakdown <i className="fa-solid fa-chevron-right"></i>
         </button>
 
         {isOpen && (
-          <p>
+          <p className="contract-explanation">
             A {contract.type} deal is {contract.explanation}
           </p>
         )}

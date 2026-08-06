@@ -1,6 +1,6 @@
-export default function PlayerBio({ bio }) {
+export default function PlayerBio({ bio, isScrolled }) {
   return (
-    <section>
+    <section className={isScrolled ? "visible" : ""}>
       <h2 className="section-header">Bio</h2>
 
       <p>

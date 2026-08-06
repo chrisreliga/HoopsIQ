@@ -12,44 +12,108 @@ body {
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
   color: #ff3c00;
   min-height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgb(21, 21, 21) 50%,
-    rgb(30, 30, 30) 100%
-  );
+  background: #000000;
+  position: relative;
 }
 
-section {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-  line-height: 2.15rem;
-  border: 0.5px solid #ff7300;
-  border-radius: 20px;
-  margin-inline: 0.75rem;
-  padding: 1rem;
+.scroll-trigger {
+  height: 10px;
 }
 
-section span {
+.content {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 2.2rem;
+  border-radius: 22px;
+  margin-inline: 1rem;
+  background: rgba(100, 100, 100, 0.2);
+  border: 1px solid rgba(105, 105, 105, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  opacity: 0;
+  transition: 800ms ease;
+  transform: translateY(0vh);
+}
+
+.content.show {
+  opacity: 1;
+  transform: translateY(-90vh);
+}
+
+.content span {
   color: #b9b9b9;
 }
 
 .section-header {
-  color: #fff;
+  color: #e1e0fe;
   text-align: center;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
 
 button {
-  text-align: center;
+  padding: 0.75rem;
+  border-radius: 22px;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #cbd9f8;
+  background: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* PlayerHero Component*/
+/* ScrollNavbar Component */
+nav {
+  position: fixed;
+  z-index: 2;
+  width: 95%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  background-color: #0000007e;
+  top: 1%;
+  justify-self: center;
+  opacity: 0;
+}
+
+nav.show {
+  opacity: 1;
+}
+
+.team-logo-container {
+  width: 20%;
+  height: 100%;
+}
+
+.team-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* PlayerHero Component */
 .hero {
   height: 100vh;
   width: 100%;
-  position: relative;
+  position: sticky;
+}
+
+.hero.scrolled {
+  filter: blur(7px);
+}
+
+.hero.scrolled::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(360deg, #0c0c0c 40%, #00000000 100%);
 }
 
 .hero img {
@@ -79,7 +143,6 @@ button {
 
 header h1 {
   font-size: 3rem;
-  text-align: center;
 }
 
 .hero-text .team-name {
@@ -87,11 +150,77 @@ header h1 {
   font-weight: bold;
 }
 
-/* PlayerAnalysis Component */
-.analysis-headline {
+.scroll-down-icon {
   color: #fff;
 }
 
-.analysis-btns {
-  display: block;
+/* PlayerBio Component */
+
+/* PlayerContract Component */
+.contract-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contract-dropdown {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  border-radius: 22px;
+  color: #cbd9f8;
+  margin-top: 1rem;
+}
+
+.contract-explanation {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 22px;
+  padding: 1rem;
+  color: #cbd9f8;
+}
+
+/* PlayerAnalysis Component */
+.analysis-dropdown {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  border-radius: 22px;
+  color: #cbd9f8;
+  margin-top: 1rem;
+}
+
+.analysis-deepdive {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  border-radius: 22px;
+  padding: 1rem;
+  color: #cbd9f8;
+}
+
+.analysis-headline span {
+  color: #e1e0fe;
+  font-size: 2.5rem;
+}
+
+.analysis-headline {
+  color: #ff6d2f;
+  text-align: center;
+  font-size: 2.5rem;
 }
