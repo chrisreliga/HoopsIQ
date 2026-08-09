@@ -24,10 +24,6 @@ export default function PlayerContract({ contract, isScrolled }) {
       </p>
 
       <div className="contract-dropdown">
-        <button className="btn" onClick={() => setIsOpen(!isOpen)}>
-          Contract Breakdown <i className="fa-solid fa-chevron-right"></i>
-        </button>
-
         {isOpen && (
           <p className="contract-explanation">
             A {contract.type} deal is {contract.explanation}
