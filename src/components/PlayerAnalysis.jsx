@@ -6,9 +6,11 @@ export default function PlayerAnalysis({
 }) {
   return (
     <section className={isScrolled ? "visible" : ""}>
-      <h2 className="analysis-headline">
-        <span>Final Grade:</span> {analysis.contractRating}
+      <h2 className="analysis-grade">
+        <span>Final Grade:</span> -{analysis.contractGrade.B}
       </h2>
+      <p className="analysis-headline">{analysis.headline}</p>
+
       <div className="analysis-dropdown">
         <button
           className="analysis-btn"
@@ -17,10 +19,6 @@ export default function PlayerAnalysis({
           Deep Dive <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>
-
-      {/* <div className={`analysis-deepdive ${isDeepDiveOpen ? "show" : ""}`}>
-        <p>{analysis.deepDive}</p>
-      </div> */}
     </section>
   );
 }

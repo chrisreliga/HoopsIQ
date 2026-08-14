@@ -11,32 +11,29 @@ import ScrollNavbar from "./ScrollNavbar.jsx";
 export default function PlayerDashboard() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
-  const triggerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsScrolled(entry.isIntersecting);
-          console.log("Trigger:", entry.isIntersecting);
-          console.log("Element:", entry.target);
-        });
-      },
-      {
-        threshold: 1,
-      },
-    );
-    observer.observe(triggerRef.current);
+    const handleWheel = (event) => {
+      event.preventDefault();
+
+      const currentDeltaY = event.deltaY;
+
+      if (currentDeltaY > 0) {
+        setIsScrolled(true);
+      } else if (currentDeltaY < 0) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("wheel", handleWheel, { passive: false });
     };
   }, []);
 
   return (
     <main className="container">
-      <div ref={triggerRef} className="scroll-trigger"></div>
-
       <ScrollNavbar bio={devinBooker.bio} isScrolled={isScrolled} />
 
       <PlayerHero bio={devinBooker.bio} isScrolled={isScrolled} />

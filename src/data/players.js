@@ -13,7 +13,7 @@ export const devinBooker = {
     country: "USA",
     height: "6'5\"",
     birthplace: "Grand Rapids, MI",
-    college: "University of Kentucky",
+    college: "UKY",
     yearsInCollege: 1,
     nicknames: "Book, D-Book",
     yearsActive: 11,
@@ -32,6 +32,7 @@ export const devinBooker = {
 
   analysis: {
     contractRating: "Good But Risky",
+    contractGrade: { A: "A", B: "B", C: "C", D: "D", F: "F" },
     headline: "A superstar contract with championship pressure",
     deepDive:
       "Devin Booker is getting paid like a true franchise superstar, and the Suns are betting their future on him being the guy who leads them to a championship. The problem is that a $55 million annual salary leaves Phoenix with very little flexibility to improve the roster around him. Booker is absolutely good enough to earn big money, but this contract puts pressure on him to prove he's more than an elite scorer — he has to be the player who makes a team a contender.",
