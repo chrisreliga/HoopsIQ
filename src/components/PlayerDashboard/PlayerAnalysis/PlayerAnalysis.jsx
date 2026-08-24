@@ -1,3 +1,5 @@
+import "./PlayerAnalysis.css";
+
 export default function PlayerAnalysis({
   analysis,
   isScrolled,

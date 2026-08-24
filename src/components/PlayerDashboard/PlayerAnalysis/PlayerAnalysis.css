@@ -1,0 +1,53 @@
+.analysis-grade {
+  color: #ff6d2f;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.analysis-grade span {
+  color: #ededf1;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.analysis-dropdown {
+  margin-top: 1rem;
+}
+
+.analysis-btn {
+  display: block;
+}
+
+.back-btn {
+  display: block;
+  width: max-content;
+  text-align: center;
+}
+
+.analysis-headline {
+  color: #e0c49b;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.analysis-deepdive {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-radius: 22px;
+  margin-inline: 1rem;
+}
+
+.deepdive-headline {
+  text-align: center;
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.deepdive-text {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  color: #efdeb2;
+}

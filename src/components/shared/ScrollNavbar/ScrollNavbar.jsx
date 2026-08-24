@@ -1,3 +1,5 @@
+import "./ScrollNavbar.css";
+
 export default function ScrollNavbar({ bio, isScrolled }) {
   return (
     <nav className={isScrolled ? "show" : ""}>

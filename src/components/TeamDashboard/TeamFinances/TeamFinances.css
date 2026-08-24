@@ -1,0 +1,61 @@
+.team-finance-section {
+  margin: 1rem;
+  text-align: center;
+}
+
+.team-finance-header-flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-finance-header {
+  color: #ededf1;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.team-finance-subheader {
+  font-size: 0.82rem;
+  color: #8d8d95;
+  margin-bottom: 2px;
+}
+
+.team-finance-tile-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.team-finance-tile {
+  padding: 0.25rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  background: linear-gradient(rgba(255, 255, 255, 0.122));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  font-size: 1.25rem;
+  font-weight: 700;
+  gap: 0.25rem;
+  text-align: center;
+  color: #b9b9b9;
+}
+
+.team-finance-tile span {
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.top-three-salary-tile,
+.team-value-rating {
+  grid-column: span 3;
+}
+
+.top-three-salary-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
