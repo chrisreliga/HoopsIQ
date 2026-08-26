@@ -22,18 +22,33 @@ export default function TeamFinances() {
         <p className="team-finance-tile">
           <span>Tax Bill</span> ${teams[0].finances.taxBill}
         </p>
-        <p className="team-finance-tile top-three-salary-tile">
+
+        <div className="team-finance-tile top-three-salary-tile">
           <span>Money tied up in the top 3 players</span>
           <div className="top-three-salary-flexbox">
             ${teams[0].finances.topThreeSalary}
             <i className="fa-solid fa-circle dot-separator"></i>
             61% of payroll
           </div>
-        </p>
-        <p className="team-finance-tile team-value-rating">
-          <span>Value Rating Meter</span>
-          /* WILL BUILD LATER */
-        </p>
+        </div>
+
+        {/* Money Meter */}
+        <div className="team-finance-tile team-meter-tile">
+          <div className="top-meter">
+            <p>Value for money</p>
+            <p className="above-line-highlight">Paying above the line</p>
+          </div>
+
+          <div className="meter-bar">
+            <div className="meter-fill"></div>
+          </div>
+
+          <div className="meter-marks">
+            <p>Bargain</p>
+            <p>Fair</p>
+            <p>Overpaying</p>
+          </div>
+        </div>
       </div>
     </section>
   );

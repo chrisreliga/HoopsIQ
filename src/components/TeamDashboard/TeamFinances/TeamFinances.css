@@ -36,7 +36,7 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   font-weight: 700;
   gap: 0.25rem;
   text-align: center;
@@ -49,7 +49,7 @@
 }
 
 .top-three-salary-tile,
-.team-value-rating {
+.team-meter-tile {
   grid-column: span 3;
 }
 
@@ -58,4 +58,48 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.team-meter-tile {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.top-meter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.meter-bar {
+  max-width: 90%;
+  width: 100%;
+  height: 10px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.15); /* the track */
+  margin: 0.5rem;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 85%;
+  border-radius: 22px;
+  background-color: green;
+}
+
+.meter-marks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.above-line-highlight {
+  font-weight: 600;
+  font-size: 1.15rem;
 }

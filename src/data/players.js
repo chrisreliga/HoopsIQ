@@ -1,6 +1,12 @@
-import devinBookerImage from "../assets/devinbooker.jpeg";
 import SunsLogo from "../assets/sunslogo.png";
+
+import devinBookerImage from "../assets/devinbooker.jpeg";
 import widescreenBook from "../assets/widescreenBook.jpg";
+import devinbookerPlayerIcon from "../assets/devinbookerPlayerIcon.jpg";
+
+import dillonbrooksPlayerIcon from "../assets/dillonbrooksPlayerIcon.jpeg";
+
+import jalengreenPlayerIcon from "../assets/jalengreenPlayerIcon.png";
 
 const devinBooker = {
   sport: "NBA",
@@ -8,8 +14,10 @@ const devinBooker = {
   bio: {
     name: "Devin Booker",
     team: "Phoenix Suns",
+    position: "Guard",
     playerImage: devinBookerImage,
     widescreenPlayerImage: widescreenBook,
+    playerIcon: devinbookerPlayerIcon,
     teamLogo: SunsLogo,
     age: 29,
     country: "USA",
@@ -46,8 +54,10 @@ const dillonBrooks = {
   bio: {
     name: "Dillon Brooks",
     team: "Phoenix Suns",
+    position: "Forward",
     // playerImage: devinBookerImage,
     // widescreenPlayerImage: widescreenBook,
+    playerIcon: dillonbrooksPlayerIcon,
     teamLogo: SunsLogo,
     age: 30,
     country: "CAD",
@@ -84,8 +94,10 @@ const jalenGreen = {
   bio: {
     name: "Jalen Green",
     team: "Phoenix Suns",
+    position: "Guard",
     // playerImage: devinBookerImage,
     // widescreenPlayerImage: widescreenBook,
+    playerIcon: jalengreenPlayerIcon,
     teamLogo: SunsLogo,
     age: 24,
     country: "USA",

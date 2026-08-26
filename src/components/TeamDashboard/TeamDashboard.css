@@ -1,0 +1,9 @@
+.team-deep-dive-btn {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+}
