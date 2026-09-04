@@ -1,17 +1,15 @@
-import { players } from "../../data/players.js";
-
 import "./TeamDashboard.css";
 
 import TeamHero from "./TeamHero/TeamHero.jsx";
 import TeamGrade from "./TeamGrade/TeamGrade.jsx";
-import BackButton from "../shared/BackButton/BackButton.jsx";
+// import BackButton from "../shared/BackButton/BackButton.jsx";
 import TeamFinances from "./TeamFinances/TeamFinances.jsx";
 import TeamRoster from "./TeamRoster/TeamRoster.jsx";
 
-export default function TeamDashboard() {
+export default function TeamDashboard({ onSelectPlayer }) {
   return (
     <main className="team-dashboard-container">
-      <BackButton />
+      {/* <BackButton /> */}
 
       <TeamHero />
 
@@ -19,7 +17,7 @@ export default function TeamDashboard() {
 
       <TeamFinances />
 
-      <TeamRoster />
+      <TeamRoster onSelectPlayer={onSelectPlayer} />
 
       <button className="team-deep-dive-btn">
         Team Deep Dive <i className="fa-solid fa-chevron-right"></i>

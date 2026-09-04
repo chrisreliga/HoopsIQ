@@ -9,9 +9,12 @@ export default function PlayerAnalysis({
   return (
     <section className={isScrolled ? "visible" : ""}>
       <h2 className="analysis-grade">
-        <span>Final Grade:</span> -{analysis.contractGrade.B}
+        <span>Final Grade:</span> {analysis.contractGrade}
       </h2>
-      <p className="analysis-headline">{analysis.headline}</p>
+
+      <div className="headline-card">
+        <p className="analysis-headline">{analysis.headline}</p>
+      </div>
 
       <div className="analysis-dropdown">
         <button

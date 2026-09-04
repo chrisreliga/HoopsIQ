@@ -1,5 +1,5 @@
 .team-roster-section {
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 .team-roster-header-styles {
@@ -8,7 +8,6 @@
 
 .team-roster-header {
   color: #ededf1;
-  text-align: center;
   font-size: 1.7rem;
   font-weight: 500;
 }
@@ -62,19 +61,24 @@
 }
 
 .avatar-name {
-  font-size: 1.02rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #ededf1;
 }
 
 .avatar-position-age {
-  font-size: 0.76rem;
   color: #b9b9b9;
 }
 
 .avatar-salary {
-  font-size: 0.76rem;
   color: #e0c49b;
+}
+
+.avatar-grade-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .avatar-grade {
@@ -84,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);

@@ -1,5 +1,5 @@
 .team-finance-section {
-  margin: 1rem;
+  margin: 0 1rem;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .team-finance-tile {
-  padding: 0.25rem;
+  padding: 0.7rem 0.4rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column-reverse;
@@ -36,7 +36,7 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  /* font-size: 1.25rem; */
+  font-size: 1.25rem;
   font-weight: 700;
   gap: 0.25rem;
   text-align: center;
@@ -102,4 +102,5 @@
 .above-line-highlight {
   font-weight: 600;
   font-size: 1.15rem;
+  color: #fff;
 }

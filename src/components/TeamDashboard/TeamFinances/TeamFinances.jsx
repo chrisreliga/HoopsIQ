@@ -1,4 +1,5 @@
 import { teams } from "../../../data/teams";
+import { formatMoney } from "../../../utilities/formatMoney.js";
 import "./TeamFinances.css";
 
 export default function TeamFinances() {
@@ -13,20 +14,21 @@ export default function TeamFinances() {
 
       <div className="team-finance-tile-container">
         <p className="team-finance-tile">
-          <span>Total Payroll</span> ${teams[0].finances.totalPayroll}
+          <span>Total Payroll</span>
+          {formatMoney(teams[0].finances.totalPayroll)}
         </p>
         <p className="team-finance-tile">
           <span>Cap Space</span>
-          {teams[0].finances.capSpace}
+          {formatMoney(teams[0].finances.capSpace)}
         </p>
         <p className="team-finance-tile">
-          <span>Tax Bill</span> ${teams[0].finances.taxBill}
+          <span>Tax Bill</span> {formatMoney(teams[0].finances.taxBill)}
         </p>
 
         <div className="team-finance-tile top-three-salary-tile">
           <span>Money tied up in the top 3 players</span>
           <div className="top-three-salary-flexbox">
-            ${teams[0].finances.topThreeSalary}
+            {formatMoney(teams[0].finances.topThreeSalary)}
             <i className="fa-solid fa-circle dot-separator"></i>
             61% of payroll
           </div>

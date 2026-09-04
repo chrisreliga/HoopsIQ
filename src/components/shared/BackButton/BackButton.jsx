@@ -1,6 +1,8 @@
-export default function BackButton() {
+import "./BackButton.css";
+
+export default function BackButton({ handleOnBack }) {
   return (
-    <button className="back-btn-container">
+    <button onClick={handleOnBack} className="back-btn-container">
       <i className="fa-solid fa-chevron-left previous-screen-btn"></i>
     </button>
   );

@@ -1,15 +1,18 @@
 import SunsLogo from "../assets/sunslogo.png";
 
-import devinBookerImage from "../assets/devinbooker.jpeg";
+import devinBookerImage from "../assets/devinbooker.jpg";
 import widescreenBook from "../assets/widescreenBook.jpg";
 import devinbookerPlayerIcon from "../assets/devinbookerPlayerIcon.jpg";
 
+import dillonBrooksImage from "../assets/dillonbrooks.jpg";
 import dillonbrooksPlayerIcon from "../assets/dillonbrooksPlayerIcon.jpeg";
 
+import jalenGreenImage from "../assets/jalengreen.jpg";
 import jalengreenPlayerIcon from "../assets/jalengreenPlayerIcon.png";
 
 const devinBooker = {
   sport: "NBA",
+  id: "devin-booker",
 
   bio: {
     name: "Devin Booker",
@@ -42,7 +45,7 @@ const devinBooker = {
 
   analysis: {
     contractRating: "Good But Risky",
-    contractGrade: { A: "A", B: "B", C: "C", D: "D", F: "F" },
+    contractGrade: "B",
     headline: "A superstar contract with championship pressure",
     deepDive: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting. Nobody's questioning if he can score, that part's not in question. The real test is whether he can carry guys who aren't as good as him to the finish line, because there's no cap space left to find out any other way.`,
   },
@@ -50,12 +53,13 @@ const devinBooker = {
 
 const dillonBrooks = {
   sport: "NBA",
+  id: "dillon-brooks",
 
   bio: {
     name: "Dillon Brooks",
     team: "Phoenix Suns",
     position: "Forward",
-    // playerImage: devinBookerImage,
+    playerImage: dillonBrooksImage,
     // widescreenPlayerImage: widescreenBook,
     playerIcon: dillonbrooksPlayerIcon,
     teamLogo: SunsLogo,
@@ -82,7 +86,7 @@ const dillonBrooks = {
 
   analysis: {
     contractRating: "Great Value, Character Risk",
-    contractGrade: { A: "A", B: "B", C: "C", D: "D", F: "F" },
+    contractGrade: "A-",
     headline: "Phoenix didn't sign a player. They signed a reputation.",
     deepDive: `Dillon Brooks didn't luck into this money, he earned every dollar of it. Nobody in the league brings it harder, night in and night out, and there were stretches last season where he was flat out outplaying Booker, not just keeping up with him. That reputation as tough, gritty, and relentless isn't a persona, it's just who he is on the floor. The real question now isn't whether he deserves the bag, he clearly does. It's whether Phoenix can keep getting that same fire out of him for three more years, because the same intensity that makes him unguardable is the same intensity that's gotten him tossed more than anyone in the league.`,
   },
@@ -90,12 +94,13 @@ const dillonBrooks = {
 
 const jalenGreen = {
   sport: "NBA",
+  id: "jalen-green",
 
   bio: {
     name: "Jalen Green",
     team: "Phoenix Suns",
     position: "Guard",
-    // playerImage: devinBookerImage,
+    playerImage: jalenGreenImage,
     // widescreenPlayerImage: widescreenBook,
     playerIcon: jalengreenPlayerIcon,
     teamLogo: SunsLogo,
@@ -103,7 +108,7 @@ const jalenGreen = {
     country: "USA",
     height: "6'4\"",
     birthplace: "Fresno, CA",
-    college: "",
+    college: "None",
     yearsInCollege: 0,
     nicknames: "Bounce, JG4",
     yearsActive: 5,
@@ -122,7 +127,7 @@ const jalenGreen = {
 
   analysis: {
     contractRating: "Steep Price, Unproven Value",
-    contractGrade: { A: "A", B: "B", C: "C", D: "D", F: "F" },
+    contractGrade: "D+",
     headline: "Phoenix just bought a ceiling nobody's seen him hit yet.",
     deepDive: `Jalen Green might be the most explosive athlete on this roster, and Phoenix just paid him like it. The problem is nobody's ever won consistently with him as the focal point — in Houston he put up buckets on a team that kept losing, and that's the exact question mark he's bringing with him. $35 million a year isn't superstar money, but it's not bench money either, and right now he's getting paid off potential more than proof. If those highlight dunks turn into winning basketball next to Booker and Brooks, this extension looks like a steal. If not, Phoenix just overpaid for a career highlight reel.`,
   },

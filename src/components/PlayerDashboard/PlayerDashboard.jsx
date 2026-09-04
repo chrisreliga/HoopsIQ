@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { players } from "../../data/players.js";
+
 import "./PlayerDashboard.css";
 
 import PlayerHero from "./PlayerHero/PlayerHero.jsx";
@@ -9,11 +9,13 @@ import PlayerAnalysis from "./PlayerAnalysis/PlayerAnalysis.jsx";
 import ScrollNavbar from "../shared/ScrollNavbar/ScrollNavbar.jsx";
 import BackButton from "../shared/BackButton/BackButton.jsx";
 
-export default function PlayerDashboard() {
+export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const handleWheel = (event) => {
       event.preventDefault();
 
@@ -21,7 +23,7 @@ export default function PlayerDashboard() {
 
       if (currentDeltaY > 0) {
         setIsScrolled(true);
-      } else if (currentDeltaY < 0) {
+      } else if (currentDeltaY <= 0) {
         setIsScrolled(false);
       }
     };
@@ -35,11 +37,10 @@ export default function PlayerDashboard() {
 
   return (
     <main className="container">
-      <ScrollNavbar bio={players[0].bio} isScrolled={isScrolled} />
+      <ScrollNavbar bio={currentPlayer.bio} isScrolled={isScrolled} />
+      <PlayerHero bio={currentPlayer.bio} isScrolled={isScrolled} />
 
-      <PlayerHero bio={players[0].bio} isScrolled={isScrolled} />
-
-      <BackButton />
+      <BackButton handleOnBack={handleOnBack} />
 
       <div
         className={
@@ -50,33 +51,33 @@ export default function PlayerDashboard() {
       >
         <div className={`content-slider ${isDeepDiveOpen ? "show" : ""}`}>
           <div className="main-content">
-            <div className="content-section bio-section">
-              <PlayerBio bio={players[0].bio} isScrolled={isScrolled} />
-            </div>
-
-            <div className="content-section contract-section">
-              <PlayerContract
-                contract={players[0].contract}
-                isScrolled={isScrolled}
-              />
-            </div>
-
-            <div className="content-section analysis-section">
+            <div className="content-section">
               <PlayerAnalysis
-                analysis={players[0].analysis}
+                analysis={currentPlayer.analysis}
                 isScrolled={isScrolled}
                 isDeepDiveOpen={isDeepDiveOpen}
                 setIsDeepDiveOpen={setIsDeepDiveOpen}
+              />
+            </div>
+
+            <div className="content-section">
+              <PlayerBio bio={currentPlayer.bio} isScrolled={isScrolled} />
+            </div>
+
+            <div className="content-section">
+              <PlayerContract
+                contract={currentPlayer.contract}
+                isScrolled={isScrolled}
               />
             </div>
           </div>
 
           <div className="analysis-deepdive">
             <h2 className="deepdive-headline">
-              {players[0].analysis.headline}
+              {currentPlayer.analysis.headline}
             </h2>
             <div className="back-btn-spacing">
-              <p className="deepdive-text">{players[0].analysis.deepDive}</p>
+              <p className="deepdive-text">{currentPlayer.analysis.deepDive}</p>
               <button
                 className="back-btn"
                 onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}

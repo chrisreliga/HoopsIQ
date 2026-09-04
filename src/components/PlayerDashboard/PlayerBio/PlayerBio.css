@@ -1,0 +1,18 @@
+.player-bio-section {
+}
+
+.player-bio-tile {
+  padding: 0.25rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(255, 255, 255, 0.122));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  font-size: 1.1rem;
+  gap: 0.25rem;
+  color: #ededf1;
+  font-size: 18px;
+  font-weight: 700;
+}

@@ -1,7 +1,7 @@
 import "./TeamRoster.css";
 import { players } from "../../../data/players";
 
-export default function TeamRoster() {
+export default function TeamRoster({ onSelectPlayer }) {
   return (
     <section className="team-roster-section">
       <div className="team-roster-header-styles">
@@ -12,116 +12,44 @@ export default function TeamRoster() {
       </div>
 
       <div className="team-roster-tile-container">
-        <div className="team-roster-tile">
-          <div className="avatar">
-            <img
-              src={players[0].bio.playerIcon}
-              alt={players[0].bio.name}
-              className="avatar-img"
-            />
-          </div>
-
-          <div className="roster-player-info">
-            <h4
-              className="avatar-name
+        {players.map((player) => (
+          <div
+            onClick={() => onSelectPlayer(player)}
+            className="team-roster-tile"
+            key={player.id}
+          >
+            <div className="avatar">
+              <img
+                src={player.bio.playerIcon}
+                alt={player.bio.name}
+                className="avatar-img"
+              />
+            </div>
+            <div className="roster-player-info">
+              <h4
+                className="avatar-name
             "
-            >
-              {players[0].bio.name}
-            </h4>
-            <p className="avatar-position-age">
-              {players[0].bio.position}
-              <i className="fa-solid fa-circle dot-separator"></i> Age <></>
-              {players[0].bio.age}
-            </p>
-            <p className="avatar-salary">
-              ${players[0].contract.salary.toLocaleString()} / yr
-              <i className="fa-solid fa-circle dot-separator"></i> thru
-              {players[0].contract.endYear}
-            </p>
+              >
+                {player.bio.name}
+              </h4>
+              <p className="avatar-position-age">
+                {player.bio.position} <></>
+                <i className="fa-solid fa-circle dot-separator"></i> Age <></>
+                {player.bio.age}
+              </p>
+              <p className="avatar-salary">
+                ${player.contract.salary.toLocaleString()} / yr <></>
+                <i className="fa-solid fa-circle dot-separator"></i> thru <></>
+                {player.contract.endYear}
+              </p>
+            </div>
+            <div className="avatar-grade-container">
+              <p className="avatar-grade">{player.analysis.contractGrade}</p>
+
+              <i className="fa-solid fa-chevron-right"></i>
+            </div>
           </div>
-
-          <div className="avatar-grade-container">
-            <p className="avatar-grade">
-              {players[1].analysis.contractGrade.B}
-            </p>
-          </div>
-
-          <i className="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <div className="team-roster-tile">
-          <div className="avatar">
-            <img
-              src={players[1].bio.playerIcon}
-              alt={players[1].bio.name}
-              className="avatar-img"
-            />
-          </div>
-
-          <div className="roster-player-info">
-            <h4
-              className="avatar-name
-            "
-            >
-              {players[1].bio.name}
-            </h4>
-            <p className="avatar-position-age">
-              {players[1].bio.position}
-              <i className="fa-solid fa-circle dot-separator"></i> Age <></>
-              {players[1].bio.age}
-            </p>
-            <p className="avatar-salary">
-              ${players[1].contract.salary.toLocaleString()} / yr
-              <i className="fa-solid fa-circle dot-separator"></i> thru
-              {players[1].contract.endYear}
-            </p>
-          </div>
-
-          <div className="avatar-grade-container">
-            <p className="avatar-grade">
-              {players[1].analysis.contractGrade.A}-
-            </p>
-          </div>
-
-          <i className="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <div className="team-roster-tile">
-          <div className="avatar">
-            <img
-              src={players[2].bio.playerIcon}
-              alt={players[2].bio.name}
-              className="avatar-img"
-            />
-          </div>
-
-          <div className="roster-player-info">
-            <h4
-              className="avatar-name
-            "
-            >
-              {players[2].bio.name}
-            </h4>
-            <p className="avatar-position-age">
-              {players[2].bio.position}
-              <i className="fa-solid fa-circle dot-separator"></i> Age <></>
-              {players[2].bio.age}
-            </p>
-            <p className="avatar-salary">
-              ${players[2].contract.salary.toLocaleString()} / yr
-              <i className="fa-solid fa-circle dot-separator"></i> thru
-              {players[2].contract.endYear}
-            </p>
-          </div>
-
-          <div className="avatar-grade-container">
-            <p className="avatar-grade">
-              {players[2].analysis.contractGrade.D}+
-            </p>
-          </div>
-
-          <i className="fa-solid fa-chevron-right"></i>
-        </div>
+        ))}
       </div>
     </section>
   );
