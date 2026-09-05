@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./PlayerContract.css";
 
+import { formatMoney } from "../../../utilities/formatMoney.js";
+
 export default function PlayerContract({ contract, isScrolled }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,9 +19,9 @@ export default function PlayerContract({ contract, isScrolled }) {
         <p className="player-contract-tile deal-type-tile">
           <span className="tile-label">Type of Deal:</span> {contract.type}
         </p>
-        <p className="player-contract-tile">
-          <span className="tile-label">Salary:</span> $
-          {contract.salary.toLocaleString()}
+        <p className="player-contract-tile accent-orange">
+          <span className="tile-label">Salary:</span>
+          {formatMoney(contract.salary)}
         </p>
         <p className="player-contract-tile">
           <span className="tile-label">Length:</span> {contract.length} seasons
@@ -29,10 +31,9 @@ export default function PlayerContract({ contract, isScrolled }) {
           {contract.startYear}-{contract.endYear}
         </p>
         <p className="player-contract-tile">
-          <span className="tile-label">Total Value:</span> $
-          {contract.totalValue.toLocaleString()}
+          <span className="tile-label">Total Value:</span>
+          {formatMoney(contract.totalValue)}
         </p>
-
         <div className="contract-dropdown">
           {isOpen && (
             <p className="contract-explanation">

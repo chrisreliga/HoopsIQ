@@ -27,8 +27,6 @@ const devinBooker = {
     height: "6'5\"",
     birthplace: "Grand Rapids, MI",
     college: "UKY",
-    yearsInCollege: 1,
-    nicknames: "Book, D-Book",
     yearsActive: 11,
   },
 
@@ -47,7 +45,9 @@ const devinBooker = {
     contractRating: "Good But Risky",
     contractGrade: "B",
     headline: "A superstar contract with championship pressure",
-    deepDive: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting. Nobody's questioning if he can score, that part's not in question. The real test is whether he can carry guys who aren't as good as him to the finish line, because there's no cap space left to find out any other way.`,
+    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
+    ddSkill: `Nobody's questioning if he can score, that part's not in question.`,
+    ddTest: `The real test is whether he can carry guys who aren't as good as him to the finish line, because there's no cap space left to find out any other way.`,
   },
 };
 
@@ -68,8 +68,6 @@ const dillonBrooks = {
     height: "6'7\"",
     birthplace: "Mississauga, ON",
     college: "ORE",
-    yearsInCollege: 3,
-    nicknames: "The Villain",
     yearsActive: 9,
   },
 
@@ -88,7 +86,7 @@ const dillonBrooks = {
     contractRating: "Great Value, Character Risk",
     contractGrade: "A-",
     headline: "Phoenix didn't sign a player. They signed a reputation.",
-    deepDive: `Dillon Brooks didn't luck into this money, he earned every dollar of it. Nobody in the league brings it harder, night in and night out, and there were stretches last season where he was flat out outplaying Booker, not just keeping up with him. That reputation as tough, gritty, and relentless isn't a persona, it's just who he is on the floor. The real question now isn't whether he deserves the bag, he clearly does. It's whether Phoenix can keep getting that same fire out of him for three more years, because the same intensity that makes him unguardable is the same intensity that's gotten him tossed more than anyone in the league.`,
+    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
   },
 };
 
@@ -109,8 +107,6 @@ const jalenGreen = {
     height: "6'4\"",
     birthplace: "Fresno, CA",
     college: "None",
-    yearsInCollege: 0,
-    nicknames: "Bounce, JG4",
     yearsActive: 5,
   },
 
@@ -129,7 +125,7 @@ const jalenGreen = {
     contractRating: "Steep Price, Unproven Value",
     contractGrade: "D+",
     headline: "Phoenix just bought a ceiling nobody's seen him hit yet.",
-    deepDive: `Jalen Green might be the most explosive athlete on this roster, and Phoenix just paid him like it. The problem is nobody's ever won consistently with him as the focal point — in Houston he put up buckets on a team that kept losing, and that's the exact question mark he's bringing with him. $35 million a year isn't superstar money, but it's not bench money either, and right now he's getting paid off potential more than proof. If those highlight dunks turn into winning basketball next to Booker and Brooks, this extension looks like a steal. If not, Phoenix just overpaid for a career highlight reel.`,
+    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
   },
 };
 

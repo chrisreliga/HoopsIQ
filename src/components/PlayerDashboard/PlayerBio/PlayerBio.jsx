@@ -18,21 +18,13 @@ export default function PlayerBio({ bio, isScrolled }) {
           <span className="tile-label">Height: </span>
           {bio.height}
         </p>
-        <p className="player-bio-tile">
+        <p className="player-bio-tile birthplace-tile">
           <span className="tile-label">Birthplace: </span>
           {bio.birthplace}
         </p>
         <p className="player-bio-tile">
           <span className="tile-label">College: </span>
           {bio.college}
-        </p>
-        <p className="player-bio-tile">
-          <span className="tile-label">Years In College: </span>
-          {bio.yearsInCollege}
-        </p>
-        <p className="player-bio-tile">
-          <span className="tile-label">Nickname: </span>
-          {bio.nicknames}
         </p>
         <p className="player-bio-tile">
           <span className="tile-label">Years Active: </span>

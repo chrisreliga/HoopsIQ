@@ -70,6 +70,15 @@ export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
                 isScrolled={isScrolled}
               />
             </div>
+
+            <div className="analysis-dropdown">
+              <button
+                className="analysis-btn"
+                onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}
+              >
+                Deep Dive <i className="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
 
           <div className="analysis-deepdive">
@@ -77,12 +86,12 @@ export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
               {currentPlayer.analysis.headline}
             </h2>
             <div className="back-btn-spacing">
-              <p className="deepdive-text">{currentPlayer.analysis.deepDive}</p>
+              <p className="deepdive-text">{currentPlayer.analysis.ddDeal}</p>
               <button
                 className="back-btn"
                 onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}
               >
-                <i className="fa-solid fa-chevron-left"></i>Back
+                <i className="fa-solid fa-chevron-left"></i>Back to Player
               </button>
             </div>
           </div>

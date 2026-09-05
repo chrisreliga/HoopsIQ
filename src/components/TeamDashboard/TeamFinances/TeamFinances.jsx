@@ -1,5 +1,7 @@
 import { teams } from "../../../data/teams";
+
 import { formatMoney } from "../../../utilities/formatMoney.js";
+
 import "./TeamFinances.css";
 
 export default function TeamFinances() {

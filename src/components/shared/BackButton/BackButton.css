@@ -16,10 +16,11 @@
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 50%;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   z-index: 100;
 }
 
 .previous-screen-btn {
-  font-size: 1rem;
+  font-size: 14px;
 }
