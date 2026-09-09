@@ -1,11 +1,6 @@
 import "./PlayerAnalysis.css";
 
-export default function PlayerAnalysis({
-  analysis,
-  isScrolled,
-  isDeepDiveOpen,
-  setIsDeepDiveOpen,
-}) {
+export default function PlayerAnalysis({ analysis, isScrolled }) {
   return (
     <section className={isScrolled ? "visible" : ""}>
       <h2 className="analysis-grade">

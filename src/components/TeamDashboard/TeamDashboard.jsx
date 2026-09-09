@@ -6,18 +6,16 @@ import TeamGrade from "./TeamGrade/TeamGrade.jsx";
 import TeamFinances from "./TeamFinances/TeamFinances.jsx";
 import TeamRoster from "./TeamRoster/TeamRoster.jsx";
 
-export default function TeamDashboard({ onSelectPlayer }) {
+export default function TeamDashboard() {
   return (
     <main className="team-dashboard-container">
-      {/* <BackButton /> */}
-
       <TeamHero />
 
       <TeamGrade />
 
       <TeamFinances />
 
-      <TeamRoster onSelectPlayer={onSelectPlayer} />
+      <TeamRoster />
 
       <button className="team-deep-dive-btn">
         Team Deep Dive <i className="fa-solid fa-chevron-right"></i>

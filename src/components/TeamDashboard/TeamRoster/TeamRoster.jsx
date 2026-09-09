@@ -1,7 +1,9 @@
-import "./TeamRoster.css";
+import { Link } from "react-router";
 import { players } from "../../../data/players";
 
-export default function TeamRoster({ onSelectPlayer }) {
+import "./TeamRoster.css";
+
+export default function TeamRoster() {
   return (
     <section className="team-roster-section">
       <div className="team-roster-header-styles">
@@ -13,8 +15,8 @@ export default function TeamRoster({ onSelectPlayer }) {
 
       <div className="team-roster-tile-container">
         {players.map((player) => (
-          <div
-            onClick={() => onSelectPlayer(player)}
+          <Link
+            to={`/player/${player.id}`}
             className="team-roster-tile"
             key={player.id}
           >
@@ -33,13 +35,13 @@ export default function TeamRoster({ onSelectPlayer }) {
                 {player.bio.name}
               </h4>
               <p className="avatar-position-age">
-                {player.bio.position} <></>
-                <i className="fa-solid fa-circle dot-separator"></i> Age <></>
+                {player.bio.position} {""}
+                <i className="fa-solid fa-circle dot-separator"></i> Age {""}
                 {player.bio.age}
               </p>
               <p className="avatar-salary">
-                ${player.contract.salary.toLocaleString()} / yr <></>
-                <i className="fa-solid fa-circle dot-separator"></i> thru <></>
+                ${player.contract.salary.toLocaleString()} / yr {""}
+                <i className="fa-solid fa-circle dot-separator"></i> thru {""}
                 {player.contract.endYear}
               </p>
             </div>
@@ -48,7 +50,7 @@ export default function TeamRoster({ onSelectPlayer }) {
 
               <i className="fa-solid fa-chevron-right"></i>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

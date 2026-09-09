@@ -4,8 +4,6 @@ import "./PlayerContract.css";
 import { formatMoney } from "../../../utilities/formatMoney.js";
 
 export default function PlayerContract({ contract, isScrolled }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <h2 className="section-header">Contract</h2>
@@ -34,13 +32,6 @@ export default function PlayerContract({ contract, isScrolled }) {
           <span className="tile-label">Total Value:</span>
           {formatMoney(contract.totalValue)}
         </p>
-        <div className="contract-dropdown">
-          {isOpen && (
-            <p className="contract-explanation">
-              A {contract.type} deal is {contract.explanation}
-            </p>
-          )}
-        </div>
       </section>
     </>
   );

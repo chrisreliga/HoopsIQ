@@ -76,6 +76,23 @@
   margin: 1rem 0;
   font-size: 1.25rem;
   color: #ededf1;
+  border-left: 2px solid rgb(70, 69, 69);
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.deepdive-text::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6d2f;
 }
 
 /* button {

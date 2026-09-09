@@ -6,10 +6,11 @@ import PlayerHero from "./PlayerHero/PlayerHero.jsx";
 import PlayerBio from "./PlayerBio/PlayerBio.jsx";
 import PlayerContract from "./PlayerContract/PlayerContract.jsx";
 import PlayerAnalysis from "./PlayerAnalysis/PlayerAnalysis.jsx";
+import PlayerDeepDive from "./PlayerDeepDive/PlayerDeepDive.jsx";
 import ScrollNavbar from "../shared/ScrollNavbar/ScrollNavbar.jsx";
 import BackButton from "../shared/BackButton/BackButton.jsx";
 
-export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
+export default function PlayerDashboard({ handleOnBack }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
 
@@ -28,16 +29,21 @@ export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
       }
     };
 
+    // Touchscreen Event Handler
+
     window.addEventListener("wheel", handleWheel, { passive: false });
+    // window.addEventListener("touchstart", handleTouch);
 
     return () => {
       window.removeEventListener("wheel", handleWheel, { passive: false });
+      // window.removeEventListener("touchstart", handleWheel, { passive: false });
     };
   }, []);
 
   return (
     <main className="container">
       <ScrollNavbar bio={currentPlayer.bio} isScrolled={isScrolled} />
+
       <PlayerHero bio={currentPlayer.bio} isScrolled={isScrolled} />
 
       <BackButton handleOnBack={handleOnBack} />
@@ -81,20 +87,11 @@ export default function PlayerDashboard({ handleOnBack, currentPlayer }) {
             </div>
           </div>
 
-          <div className="analysis-deepdive">
-            <h2 className="deepdive-headline">
-              {currentPlayer.analysis.headline}
-            </h2>
-            <div className="back-btn-spacing">
-              <p className="deepdive-text">{currentPlayer.analysis.ddDeal}</p>
-              <button
-                className="back-btn"
-                onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}
-              >
-                <i className="fa-solid fa-chevron-left"></i>Back to Player
-              </button>
-            </div>
-          </div>
+          <PlayerDeepDive
+            isDeepDiveOpen={isDeepDiveOpen}
+            setIsDeepDiveOpen={setIsDeepDiveOpen}
+            currentPlayer={currentPlayer}
+          />
         </div>
       </div>
     </main>

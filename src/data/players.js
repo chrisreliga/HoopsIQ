@@ -37,17 +37,15 @@ const devinBooker = {
     startYear: 2024,
     endYear: 2027,
     totalValue: 220441984,
-    explanation:
-      "a special NBA contract for elite players that lets their team offer the most money and longest deal possible to keep them.",
   },
 
   analysis: {
     contractRating: "Good But Risky",
     contractGrade: "B",
     headline: "A superstar contract with championship pressure",
-    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
-    ddSkill: `Nobody's questioning if he can score, that part's not in question.`,
-    ddTest: `The real test is whether he can carry guys who aren't as good as him to the finish line, because there's no cap space left to find out any other way.`,
+    ddDeal: `A supermax is the one contract only your current team is allowed to offer — more money, more years, built so stars never leave. Phoenix spent theirs on Booker through 2030`,
+    ddSkill: `Nobody's debating the scoring. Whether scoring alone is worth the biggest cap hit on the roster is the part still open`,
+    ddTest: `He has to lift a flawed roster in May, not just fill the box score in January. Phoenix has no cap room left to fix it another way`,
   },
 };
 
@@ -78,15 +76,15 @@ const dillonBrooks = {
     startYear: 2027,
     endYear: 2030,
     totalValue: 73000000,
-    explanation:
-      "a standard way for teams to add more years and money onto a player already on their roster, without the extra perks that are only reserved for a small group of top-tier superstars.",
   },
 
   analysis: {
     contractRating: "Great Value, Character Risk",
     contractGrade: "A-",
     headline: "Phoenix didn't sign a player. They signed a reputation.",
-    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
+    ddDeal: `A veteran extension lets a team lock a player in before he ever reaches free agency — no bidding, no meetings, no other offers. Phoenix used one on Brooks: three years, $73 million, through 2030`,
+    ddSkill: `The defense and the edge were never in question, and he just posted a career-high 20.2 a night. Whether that adds up to $24 million a year is the argument`,
+    ddTest: `He has to keep the scoring jump without losing the defensive bite. Phoenix paid for both, and if the offense was a one-year spike, this deal ages fast`,
   },
 };
 
@@ -117,15 +115,15 @@ const jalenGreen = {
     startYear: 2025,
     endYear: 2028,
     totalValue: 105000000,
-    explanation:
-      "a deal a team offers a young player still on his rookie contract, usually before his fourth season ends, to lock him up long-term before the rest of the league gets a chance to bid on him.",
   },
 
   analysis: {
     contractRating: "Steep Price, Unproven Value",
     contractGrade: "D+",
     headline: "Phoenix just bought a ceiling nobody's seen him hit yet.",
-    ddDeal: `Devin Booker just signed a $55 million-a-year deal that reads like a dare: win now, or wear it. Phoenix bet the whole checkbook on him being a true number one, but he's never dragged a team out of the first round without another star doing half the lifting.`,
+    ddDeal: `A rookie extension is the first real payday off a first contract, and Green's ends with a player option — $36 million that he decides on, not Phoenix. The leverage sits with him`,
+    ddSkill: `He can drop 30 on anybody and the athleticism is genuinely rare. Whether it has ever made a team better is the question nobody has answered yet`,
+    ddTest: `He has to make the game easier for Booker instead of taking turns with him. A 1.4 assist-to-turnover ratio won't survive a front office deciding whether to pay him twice`,
   },
 };
 
