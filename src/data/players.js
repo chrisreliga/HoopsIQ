@@ -127,4 +127,44 @@ const jalenGreen = {
   },
 };
 
-export const players = [devinBooker, dillonBrooks, jalenGreen];
+const milesBridges = {
+  sport: "NBA",
+  id: "miles-bridges",
+
+  bio: {
+    name: "Miles Bridges",
+    team: "Phoenix Suns",
+    position: "",
+    playerImage: "",
+    widescreenPlayerImage: "",
+    playerIcon: "",
+    teamLogo: SunsLogo,
+    age: "",
+    country: "USA",
+    height: "",
+    birthplace: "",
+    college: "",
+    yearsActive: "",
+  },
+
+  contract: {
+    type: "",
+    salary: "$$$$",
+    length: "",
+    startYear: "",
+    endYear: "",
+    totalValue: "$$$$",
+  },
+
+  analysis: {
+    contractRating: "",
+    contractGrade: "",
+    headline:
+      "Beat the shit out of his girlfriend... kind of a controversial signing",
+    ddDeal: `A rookie extension is the first real payday off a first contract, and Green's ends with a player option — $36 million that he decides on, not Phoenix. The leverage sits with him`,
+    ddSkill: `He can drop 30 on anybody and the athleticism is genuinely rare. Whether it has ever made a team better is the question nobody has answered yet`,
+    ddTest: `He has to make the game easier for Booker instead of taking turns with him. A 1.4 assist-to-turnover ratio won't survive a front office deciding whether to pay him twice`,
+  },
+};
+
+export const players = [devinBooker, dillonBrooks, jalenGreen, milesBridges];

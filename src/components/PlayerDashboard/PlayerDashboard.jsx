@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+
+import { players } from "../../data/players.js";
 
 import "./PlayerDashboard.css";
 
@@ -10,10 +13,16 @@ import PlayerDeepDive from "./PlayerDeepDive/PlayerDeepDive.jsx";
 import ScrollNavbar from "../shared/ScrollNavbar/ScrollNavbar.jsx";
 import BackButton from "../shared/BackButton/BackButton.jsx";
 
-export default function PlayerDashboard({ handleOnBack }) {
+export default function PlayerDashboard() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
 
+  // useParams Hook
+  const { playerId } = useParams();
+  const currentPlayer = players.find((player) => playerId === player.id);
+  console.log(currentPlayer);
+
+  // useEffect Hook
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -28,8 +37,6 @@ export default function PlayerDashboard({ handleOnBack }) {
         setIsScrolled(false);
       }
     };
-
-    // Touchscreen Event Handler
 
     window.addEventListener("wheel", handleWheel, { passive: false });
     // window.addEventListener("touchstart", handleTouch);
@@ -46,7 +53,7 @@ export default function PlayerDashboard({ handleOnBack }) {
 
       <PlayerHero bio={currentPlayer.bio} isScrolled={isScrolled} />
 
-      <BackButton handleOnBack={handleOnBack} />
+      <BackButton />
 
       <div
         className={

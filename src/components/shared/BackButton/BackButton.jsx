@@ -1,9 +1,11 @@
+import { Link } from "react-router";
+
 import "./BackButton.css";
 
-export default function BackButton({ handleOnBack }) {
+export default function BackButton() {
   return (
-    <button onClick={handleOnBack} className="back-btn-container">
+    <Link to="/" className="back-btn-container">
       <i className="fa-solid fa-chevron-left previous-screen-btn"></i>
-    </button>
+    </Link>
   );
 }

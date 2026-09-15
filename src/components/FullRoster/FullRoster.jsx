@@ -1,13 +1,14 @@
 import { Link } from "react-router";
-import { players } from "../../../data/players";
+import { players } from "../../data/players";
+import "./FullRoster.css";
 
-import "./TeamRoster.css";
+import BackButton from "../shared/BackButton/BackButton";
 
-const firstThree = players.slice(0, 3);
-
-export default function TeamRoster() {
+export default function FullRoster() {
   return (
     <section className="team-roster-section">
+      <BackButton />
+
       <div className="team-roster-header-styles">
         <h2 className="team-roster-header">Roster</h2>
         <p className="team-roster-subheader">
@@ -16,7 +17,7 @@ export default function TeamRoster() {
       </div>
 
       <div className="team-roster-tile-container">
-        {firstThree.map((player) => (
+        {players.map((player) => (
           <Link
             to={`/player/${player.id}`}
             className="team-roster-tile"
@@ -55,9 +56,6 @@ export default function TeamRoster() {
           </Link>
         ))}
       </div>
-      <Link to="/full-roster">
-        <button className="full-roster-btn">See Full Roster</button>
-      </Link>
     </section>
   );
 }

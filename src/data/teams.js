@@ -1,3 +1,4 @@
+import { players } from "./players";
 import SunsLogo from "../assets/sunslogo.png";
 
 const phoenixSuns = {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./PlayerContract.css";
 
 import { formatMoney } from "../../../utilities/formatMoney.js";
