@@ -1,8 +1,9 @@
+import { Outlet } from "react-router";
+
 import "./App.css";
-import PlayerDashboard from "./components/PlayerDashboard";
 
 function App() {
-  return <PlayerDashboard />;
+  return <Outlet />;
 }
 
 export default App;

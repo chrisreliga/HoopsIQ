@@ -1,0 +1,21 @@
+.player-bio-section {
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.player-bio-tile {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.122));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: #ededf1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.birthplace-tile {
+  grid-column: span 2;
+}
