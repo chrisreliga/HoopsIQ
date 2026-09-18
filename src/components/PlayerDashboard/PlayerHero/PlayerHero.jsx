@@ -6,7 +6,7 @@ export default function PlayerHero({ bio, isScrolled }) {
       <div className={isScrolled ? "player-hero scrolled" : "player-hero"}>
         <picture>
           <source
-            media="(min-width: 1000px)"
+            media="(min-width: 900px)"
             srcSet={bio.widescreenPlayerImage}
           />
           <img src={bio.playerImage} alt={bio.name} />
