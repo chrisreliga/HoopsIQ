@@ -12,6 +12,7 @@ const phoenixSuns = {
     standings: 8,
     division: "West",
     teamLogo: SunsLogo,
+    teamColors: ["#fff", "#333", "#d9d"],
   },
 
   finances: {
