@@ -1,5 +1,5 @@
 .team-roster-section {
-  margin: 0 1rem;
+  margin: 0 26px;
 }
 
 .team-roster-header-styles {
@@ -8,12 +8,12 @@
 
 .team-roster-header {
   color: #ededf1;
-  font-size: 1.7rem;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .team-roster-subheader {
-  font-size: 0.82rem;
+  font-size: 14px;
   color: #8d8d95;
   margin-bottom: 12px;
 }
@@ -25,7 +25,7 @@
 }
 
 .team-roster-tile {
-  padding: 0.5rem;
+  padding: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,8 +40,8 @@
 
 .avatar {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.07);
@@ -63,17 +63,19 @@
 }
 
 .avatar-name {
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: 600;
   color: #ededf1;
 }
 
 .avatar-position-age {
   color: #b9b9b9;
+  font-size: 14px;
 }
 
 .avatar-salary {
   color: #e0c49b;
+  font-size: 14px;
 }
 
 .avatar-grade-container {
@@ -90,10 +92,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 700;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.full-roster-link {
+  text-decoration: none;
 }
 
 .full-roster-btn {
@@ -107,14 +113,94 @@
   font-size: 1.25rem;
   color: #e0c49b;
   background: linear-gradient(
-    90deg,
-    rgba(52, 60, 69, 0.35) 0%,
-    rgba(35, 27, 56, 0.35) 50%,
-    rgba(25, 10, 56, 0.35) 100%
+    to right,
+    rgba(255, 51, 0, 0.277) 20%,
+    rgba(21, 7, 56, 0.375) 99% /* #0a0714 100% */
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(127, 127, 127, 0.3);
   border-radius: 22px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  text-decoration: none;
+}
+
+.good-grade {
+  color: #7fe3a1;
+}
+
+.okay-grade {
+  color: #ffb765;
+}
+
+.bad-grade {
+  color: #ff7a6b;
+}
+
+.neutral-grade {
+  color: gray;
+}
+
+@media (min-width: 800px) {
+  .team-roster-section {
+    margin-inline: 200px 200px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .team-roster-tile-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .team-roster-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .avatar {
+    height: 100px;
+    width: 100px;
+  }
+
+  .roster-player-info {
+    text-align: center;
+  }
+
+  .avatar-name {
+    font-size: 22px;
+  }
+
+  .avatar-position-age {
+    font-size: 18px;
+  }
+
+  .avatar-salary {
+    font-size: 18px;
+  }
+
+  .avatar-grade-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .avatar-grade {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .team-roster-grade-arrow {
+    display: none;
+  }
 }
