@@ -64,9 +64,7 @@ export default function TeamRoster() {
                   className="avatar-name
             "
                 >
-                  {player.api?.first_name}
-                  {""}
-                  {player.api?.last_name}
+                  {`${player.api?.first_name} ${player.api?.last_name}`}
                 </h4>
 
                 <p className="avatar-position-age">
