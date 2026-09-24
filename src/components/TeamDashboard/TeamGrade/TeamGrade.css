@@ -1,11 +1,11 @@
 .team-grade-section {
-  padding: 1.5rem;
+  padding: 1rem;
   background: rgba(100, 100, 100, 0.2);
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border: 1px solid rgba(105, 105, 105, 0.3);
   border-radius: 22px;
-  margin: 0 1rem;
+  margin: 0 26px;
   text-align: center;
 }
 
@@ -19,16 +19,33 @@
 .team-grade-header {
   color: #ededf1;
   font-weight: 500;
+  font-size: 22px;
 }
 
 .team-grade-letter {
-  font-size: 4rem;
+  font-size: 56px;
+}
+
+.good-grade {
+  color: #7fe3a1;
+}
+
+.okay-grade {
+  color: #ffb765;
+}
+
+.bad-grade {
+  color: #ff7a6b;
+}
+
+.neutral-grade {
+  color: gray;
 }
 
 .team-analysis-headline {
   color: #e0c49b;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 14px;
 }
 
 .status-chips {
@@ -44,7 +61,7 @@
   border: 1px solid;
   border-radius: 22px;
   padding: 6px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .chip.bad {
@@ -63,4 +80,16 @@
   color: #7fe3a1;
   border-color: rgba(127, 227, 161, 0.28);
   background: rgba(127, 227, 161, 0.08);
+}
+
+@media (min-width: 800px) {
+  .team-grade-section {
+    margin-inline: 200px 200px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .team-grade-section {
+    margin-inline: 400px 400px;
+  }
 }
