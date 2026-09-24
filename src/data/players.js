@@ -12,18 +12,14 @@ import jalengreenPlayerIcon from "../assets/jalengreenPlayerIcon.png";
 
 const devinBooker = {
   sport: "NBA",
-  id: "devin-booker",
+  id: 57,
 
   bio: {
-    name: "Devin Booker",
-    team: "Phoenix Suns",
-    position: "Guard",
     playerImage: devinBookerImage,
     widescreenPlayerImage: widescreenBook,
     playerIcon: devinbookerPlayerIcon,
     teamLogo: SunsLogo,
     age: 29,
-    country: "USA",
     height: "6'5\"",
     birthplace: "Grand Rapids, MI",
     college: "UKY",
@@ -51,18 +47,14 @@ const devinBooker = {
 
 const dillonBrooks = {
   sport: "NBA",
-  id: "dillon-brooks",
+  id: 66,
 
   bio: {
-    name: "Dillon Brooks",
-    team: "Phoenix Suns",
-    position: "Forward",
     playerImage: dillonBrooksImage,
     // widescreenPlayerImage: widescreenBook,
     playerIcon: dillonbrooksPlayerIcon,
     teamLogo: SunsLogo,
     age: 30,
-    country: "CAD",
     height: "6'7\"",
     birthplace: "Mississauga, ON",
     college: "ORE",
@@ -90,7 +82,7 @@ const dillonBrooks = {
 
 const jalenGreen = {
   sport: "NBA",
-  id: "jalen-green",
+  id: 17895966,
 
   bio: {
     name: "Jalen Green",
@@ -129,7 +121,7 @@ const jalenGreen = {
 
 const milesBridges = {
   sport: "NBA",
-  id: "miles-bridges",
+  id: 62,
 
   bio: {
     name: "Miles Bridges",

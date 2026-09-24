@@ -10,10 +10,9 @@ import "./TeamRoster.css";
 export default function TeamRoster() {
   const [apiPlayers, setApiPlayers] = useState(null);
 
-  const mobileTeamRoster = apiPlayers.slice(0, 9);
   const isMobile = useMediaQuery("(max-width: 1100px)");
-  const visible = isMobile ? mobileTeamRoster : apiPlayers;
-  console.log(apiPlayers);
+
+  console.table(apiPlayers);
 
   useEffect(() => {
     fetch("https://api.balldontlie.io/v1/players?per_page=100&team_ids[]=24", {
@@ -25,6 +24,16 @@ export default function TeamRoster() {
         setApiPlayers(result.data);
       });
   }, []);
+
+  const combinedPlayers = apiPlayers
+    ? players.map((player) => {
+        const apiMatch = apiPlayers.find((p) => p.id === player.id);
+        return { ...player, api: apiMatch };
+      })
+    : null;
+
+  const mobileTeamRoster = combinedPlayers && combinedPlayers.slice(0, 9);
+  const visible = isMobile ? mobileTeamRoster : combinedPlayers;
 
   return (
     <section className="team-roster-section">
@@ -45,8 +54,8 @@ export default function TeamRoster() {
             >
               <div className="avatar">
                 <img
-                  // src={player.bio.playerIcon}
-                  alt={player.last_name}
+                  src={player.bio.playerIcon}
+                  alt={`${player.api?.first_name} ${player.api?.last_name}`}
                   className="avatar-img"
                 />
               </div>
@@ -55,12 +64,12 @@ export default function TeamRoster() {
                   className="avatar-name
             "
                 >
-                  {player.first_name}
-                  {player.last_name}
+                  {player.api?.first_name}
+                  {player.api?.last_name}
                 </h4>
 
                 <p className="avatar-position-age">
-                  {player.position} {""}
+                  {player.api?.position} {""}
                   <i className="fa-solid fa-circle dot-separator"></i> Age {""}
                   {player.bio.age}
                 </p>
