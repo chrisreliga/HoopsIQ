@@ -127,47 +127,6 @@ const jalenGreen = {
   },
 };
 
-// TEST PLAYER
-const jalenGreens = {
-  sport: "NBA",
-  id: "jalen-greens",
-
-  bio: {
-    name: "Jalen Green",
-    team: "Phoenix Suns",
-    position: "Guard",
-    playerImage: jalenGreenImage,
-    // widescreenPlayerImage: widescreenBook,
-    playerIcon: jalengreenPlayerIcon,
-    teamLogo: SunsLogo,
-    age: 24,
-    country: "USA",
-    height: "6'4\"",
-    birthplace: "Fresno, CA",
-    college: "None",
-    yearsActive: 5,
-  },
-
-  contract: {
-    type: "Rookie Scale Extension",
-    salary: 35000000,
-    length: 3,
-    startYear: 2025,
-    endYear: 2028,
-    totalValue: 105000000,
-  },
-
-  analysis: {
-    contractRating: "Steep Price, Unproven Value",
-    contractGrade: "D+",
-    headline: "Phoenix just bought a ceiling nobody's seen him hit yet.",
-    ddDeal: `A rookie extension is the first real payday off a first contract, and Green's ends with a player option — $36 million that he decides on, not Phoenix. The leverage sits with him`,
-    ddSkill: `He can drop 30 on anybody and the athleticism is genuinely rare. Whether it has ever made a team better is the question nobody has answered yet`,
-    ddTest: `He has to make the game easier for Booker instead of taking turns with him. A 1.4 assist-to-turnover ratio won't survive a front office deciding whether to pay him twice`,
-  },
-};
-// TEST PLAYER
-
 const milesBridges = {
   sport: "NBA",
   id: "miles-bridges",
@@ -208,10 +167,4 @@ const milesBridges = {
   },
 };
 
-export const players = [
-  devinBooker,
-  dillonBrooks,
-  jalenGreen,
-  jalenGreens,
-  milesBridges,
-];
+export const players = [devinBooker, dillonBrooks, jalenGreen, milesBridges];

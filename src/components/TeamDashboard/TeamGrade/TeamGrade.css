@@ -87,3 +87,9 @@
     margin-inline: 200px 200px;
   }
 }
+
+@media (min-width: 1500px) {
+  .team-grade-section {
+    margin-inline: 400px 400px;
+  }
+}
