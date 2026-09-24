@@ -85,15 +85,11 @@ const jalenGreen = {
   id: 17895966,
 
   bio: {
-    name: "Jalen Green",
-    team: "Phoenix Suns",
-    position: "Guard",
     playerImage: jalenGreenImage,
     // widescreenPlayerImage: widescreenBook,
     playerIcon: jalengreenPlayerIcon,
     teamLogo: SunsLogo,
     age: 24,
-    country: "USA",
     height: "6'4\"",
     birthplace: "Fresno, CA",
     college: "None",
@@ -124,15 +120,11 @@ const milesBridges = {
   id: 62,
 
   bio: {
-    name: "Miles Bridges",
-    team: "Phoenix Suns",
-    position: "",
     playerImage: "",
     widescreenPlayerImage: "",
     playerIcon: "",
     teamLogo: SunsLogo,
     age: "",
-    country: "USA",
     height: "",
     birthplace: "",
     college: "",

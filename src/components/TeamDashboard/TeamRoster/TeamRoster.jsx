@@ -65,6 +65,7 @@ export default function TeamRoster() {
             "
                 >
                   {player.api?.first_name}
+                  {""}
                   {player.api?.last_name}
                 </h4>
 
