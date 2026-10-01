@@ -1,29 +1,26 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import useFetch from "../../../hooks/useFetch";
 import { players } from "../../../data/players";
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 import { formatMoney } from "../../../utilities/formatMoney";
 import { getGradeTone } from "../../../utilities/getGradeTone";
 
+import RateLimitCountdown from "../../shared/RateLimitCountdown";
+
 import "./TeamRoster.css";
 
 export default function TeamRoster() {
-  const [apiPlayers, setApiPlayers] = useState(null);
+  const playerIds = players.map((player) => player.id);
+
+  const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
+
+  const { data, loading, error } = useFetch(
+    `https://api.balldontlie.io/v1/players?per_page=100&${query}`,
+  );
 
   const isMobile = useMediaQuery("(max-width: 1100px)");
 
-  console.table(apiPlayers);
-
-  useEffect(() => {
-    fetch("https://api.balldontlie.io/v1/players?per_page=100&team_ids[]=24", {
-      headers: { Authorization: "940ac35f-369c-4483-9555-109472ac7f08" },
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        setApiPlayers(result.data);
-      });
-  }, []);
+  const apiPlayers = data ? data.data : null;
 
   const combinedPlayers = apiPlayers
     ? players.map((player) => {
@@ -32,7 +29,8 @@ export default function TeamRoster() {
       })
     : null;
 
-  const mobileTeamRoster = combinedPlayers && combinedPlayers.slice(0, 9);
+  const mobileTeamRoster = combinedPlayers && combinedPlayers.slice(0, 5);
+
   const visible = isMobile ? mobileTeamRoster : combinedPlayers;
 
   return (
@@ -45,6 +43,13 @@ export default function TeamRoster() {
       </div>
 
       <div className="team-roster-tile-container">
+        {loading && <p>Loading roster...</p>}
+        {error && (
+          <div className="team-roster-error">
+            <p>Call Limit Reached.</p>
+            <RateLimitCountdown />
+          </div>
+        )}
         {visible &&
           visible.map((player) => (
             <Link
@@ -92,7 +97,6 @@ export default function TeamRoster() {
             </Link>
           ))}
       </div>
-
       <Link to="/full-roster" className="full-roster-link">
         <button className="full-roster-btn">See Full Roster</button>
       </Link>

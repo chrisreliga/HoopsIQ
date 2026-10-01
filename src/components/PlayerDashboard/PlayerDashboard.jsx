@@ -19,8 +19,9 @@ export default function PlayerDashboard() {
 
   // useParams Hook
   const { playerId } = useParams();
-  const currentPlayer = players.find((player) => playerId === player.id);
-  console.log(currentPlayer);
+  const currentPlayer = players.find(
+    (player) => Number(playerId) === player.id,
+  );
 
   // useEffect Hook
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function PlayerDashboard() {
     <main className="container">
       <ScrollNavbar bio={currentPlayer.bio} isScrolled={isScrolled} />
 
-      <PlayerHero bio={currentPlayer.bio} isScrolled={isScrolled} />
+      <PlayerHero isScrolled={isScrolled} currentPlayer={currentPlayer} />
 
       <BackButton />
 
