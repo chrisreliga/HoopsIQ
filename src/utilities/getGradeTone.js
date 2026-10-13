@@ -6,13 +6,13 @@ export function getGradeTone(grade) {
   const gradeLetter = grade.slice(0, 1);
 
   if (gradeLetter === "A" || gradeLetter === "B") {
-    return "good-grade";
+    return "good-grade good-grade-container";
   }
   if (gradeLetter === "C") {
-    return "okay-grade";
+    return "okay-grade okay-grade-container";
   }
   if (gradeLetter === "D" || gradeLetter === "F") {
-    return "bad-grade";
+    return "bad-grade bad-grade-container";
   }
 
   return "neutral-grade";

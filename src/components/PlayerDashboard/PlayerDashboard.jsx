@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
 
 import { players } from "../../data/players.js";
@@ -16,6 +16,8 @@ import BackButton from "../shared/BackButton/BackButton.jsx";
 export default function PlayerDashboard() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
+
+  const initTouch = useRef(0);
 
   // useParams Hook
   const { playerId } = useParams();
@@ -39,18 +41,45 @@ export default function PlayerDashboard() {
       }
     };
 
+    const handleTouchStart = (event) => {
+      initTouch.current = event.touches[0].clientY;
+      console.log(initTouch.current);
+    };
+
+    const handleTouchMove = (event) => {
+      event.preventDefault();
+
+      const currPosition = event.touches[0].clientY;
+
+      const swipeDistance = initTouch.current - currPosition;
+
+      console.log(swipeDistance);
+
+      if (swipeDistance > 200) {
+        setIsScrolled(true);
+      } else if (swipeDistance < -800) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
     window.addEventListener("wheel", handleWheel, { passive: false });
-    // window.addEventListener("touchstart", handleTouch);
 
     return () => {
       window.removeEventListener("wheel", handleWheel, { passive: false });
-      // window.removeEventListener("touchstart", handleWheel, { passive: false });
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
   return (
     <main className="container">
-      <ScrollNavbar bio={currentPlayer.bio} isScrolled={isScrolled} />
+      <ScrollNavbar
+        currentPlayer={currentPlayer}
+        bio={currentPlayer.bio}
+        isScrolled={isScrolled}
+      />
 
       <PlayerHero isScrolled={isScrolled} currentPlayer={currentPlayer} />
 

@@ -35,8 +35,18 @@ export default function PlayerHero({ isScrolled, currentPlayer }) {
             </picture>
 
             <div className="player-hero-text">
-              <h1>{`${apiPlayer.first_name} ${apiPlayer.last_name}`}</h1>
-              <p className="team-name">{apiPlayer.team.name}</p>
+              <h1 className="player-name">
+                <span className="player-first-name">
+                  {apiPlayer.first_name}
+                </span>
+                {apiPlayer.last_name}
+              </h1>
+
+              <div className="team-name-container">
+                <p className="team-name">{apiPlayer.team.city}</p>
+                <p className="team-name">{apiPlayer.team.name}</p>
+              </div>
+
               <i className="fa-solid fa-chevron-down scroll-down-icon"></i>
             </div>
           </>

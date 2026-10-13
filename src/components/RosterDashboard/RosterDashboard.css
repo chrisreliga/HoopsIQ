@@ -1,13 +1,26 @@
+.roster-dashboard {
+  max-width: 100%;
+  margin: 0 20px;
+  position: relative;
+  top: 70px;
+}
+
+.fullRoster-header-styles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 0 12px;
+}
+
 .team-full-roster-header {
-  margin-top: 60px;
+  font-size: 28px;
 }
 
 .back-btn-container {
   height: 2.2rem;
   width: 2.2rem;
   position: fixed;
-  top: 16px;
-  margin-left: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +53,8 @@
   font-size: 20px;
   color: #b9b9b9;
   margin: 20px 0;
+}
+
+.right-arrow {
+  color: #868686;
 }

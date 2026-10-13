@@ -92,7 +92,7 @@ export default function TeamRoster() {
                   {player.analysis.contractGrade}
                 </p>
 
-                <i className="fa-solid fa-chevron-right team-roster-grade-arrow"></i>
+                <i className="fa-solid fa-chevron-right right-arrow"></i>
               </div>
             </Link>
           ))}

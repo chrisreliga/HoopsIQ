@@ -33,6 +33,7 @@ import haywoodHighsmithAvatar from "../assets/haywoodHighsmithAvatar.avif";
 const devinBooker = {
   sport: "NBA",
   id: 57,
+  position: "SG",
 
   bio: {
     playerImage: devinBookerDashboard,
@@ -68,6 +69,7 @@ const devinBooker = {
 const dillonBrooks = {
   sport: "NBA",
   id: 66,
+  position: "SF",
 
   bio: {
     playerImage: dillonBrooksImage,
@@ -103,6 +105,7 @@ const dillonBrooks = {
 const jalenGreen = {
   sport: "NBA",
   id: 17895966,
+  position: "SG",
 
   bio: {
     playerImage: jalenGreenDashboard,
@@ -138,6 +141,7 @@ const jalenGreen = {
 const milesBridges = {
   sport: "NBA",
   id: 62,
+  position: "PF",
 
   bio: {
     playerImage: null,
@@ -174,6 +178,7 @@ const milesBridges = {
 const markWilliams = {
   sport: "NBA",
   id: 38017698,
+  position: "C",
 
   bio: {
     playerImage: null,
@@ -210,6 +215,7 @@ const markWilliams = {
 const collinGillespie = {
   sport: "NBA",
   id: 38017727,
+  position: "PG",
 
   bio: {
     playerImage: null,
@@ -246,6 +252,7 @@ const collinGillespie = {
 const khamanMaluach = {
   sport: "NBA",
   id: 1057268513,
+  position: "C",
 
   bio: {
     playerImage: null,
@@ -281,6 +288,7 @@ const khamanMaluach = {
 const ryanDunn = {
   sport: "NBA",
   id: 1028025723,
+  position: "SF",
 
   bio: {
     playerImage: null,
@@ -316,6 +324,7 @@ const ryanDunn = {
 const osoIghodaro = {
   sport: "NBA",
   id: 1028036515,
+  position: "PF",
 
   bio: {
     playerImage: null,
@@ -351,6 +360,7 @@ const osoIghodaro = {
 const lukeKennard = {
   sport: "NBA",
   id: 254,
+  position: "SG",
 
   bio: {
     playerImage: null,
@@ -386,6 +396,7 @@ const lukeKennard = {
 const jordanGoodwin = {
   sport: "NBA",
   id: 18678058,
+  position: "PG",
 
   bio: {
     playerImage: null,
@@ -421,6 +432,7 @@ const jordanGoodwin = {
 const haywoodHighsmith = {
   sport: "NBA",
   id: 3092,
+  position: "SF",
 
   bio: {
     playerImage: null,
@@ -456,6 +468,7 @@ const haywoodHighsmith = {
 const rasheerFleming = {
   sport: "NBA",
   id: 1057383369,
+  position: "PF",
 
   bio: {
     playerImage: null,
