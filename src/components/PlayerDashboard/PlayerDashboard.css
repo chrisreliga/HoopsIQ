@@ -11,7 +11,7 @@
 
 .player-content-transition.show {
   opacity: 1;
-  transform: translateY(-90vh);
+  transform: translateY(-65%);
 }
 
 .content-slider {

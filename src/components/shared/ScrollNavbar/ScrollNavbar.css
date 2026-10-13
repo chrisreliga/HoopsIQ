@@ -11,10 +11,7 @@ nav {
   width: 90vw;
   height: 10vh;
   gap: 2rem;
-  background-color: #00000052;
-  background: #00000022;
   border-radius: 22px;
-  /* transition: opacity 500ms ease; */
   transition: opacity 300ms ease-out;
   font-size: 1.25rem;
   opacity: 0;
@@ -26,7 +23,8 @@ nav.show {
 }
 
 .team-logo-container {
-  height: 68px;
+  height: 48px;
+  display: flex;
 }
 
 .team-logo-img {
@@ -35,4 +33,11 @@ nav.show {
   border-radius: 22px;
   object-fit: contain;
   /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); */
+}
+
+.navbar-player-name {
+  align-self: center;
+  color: #a89e87;
+  font-size: 20px;
+  font-weight: 500;
 }

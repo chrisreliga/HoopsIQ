@@ -1,0 +1,48 @@
+.roster-stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #8d8d95;
+  border-radius: 16px;
+  background: #121214;
+  /* flex: 1; */
+}
+
+.roster-stat {
+  font-size: 10px;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.roster-stat.borders {
+  border-left: 1px solid #8d8d95;
+  border-right: 1px solid #8d8d95;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.roster-stat-header {
+  font-size: 12px;
+  color: #8d8d95;
+}
+
+.roster-stat-players {
+  font-size: 17px;
+  color: #ededf1;
+  font-weight: 700;
+}
+
+.roster-stat-payroll {
+  font-size: 17px;
+  color: #e0c49b;
+  font-weight: 700;
+}
+
+.roster-stat-grade {
+  font-size: 17px;
+  font-weight: 700;
+}

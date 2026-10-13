@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router";
 import App from "./App.jsx";
 import TeamDashboard from "./components/TeamDashboard/TeamDashboard.jsx";
 import PlayerDashboard from "./components/PlayerDashboard/PlayerDashboard.jsx";
-import FullRoster from "./components/FullRoster/FullRoster.jsx";
+import RosterDashboard from "./components/RosterDashboard/RosterDashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       },
       {
         path: "full-roster",
-        element: <FullRoster />,
+        element: <RosterDashboard />,
       },
       {
         path: "player/:playerId",

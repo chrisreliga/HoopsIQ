@@ -24,6 +24,8 @@
 
 .team-grade-letter {
   font-size: 56px;
+  background: none;
+  border: none;
 }
 
 .good-grade {
