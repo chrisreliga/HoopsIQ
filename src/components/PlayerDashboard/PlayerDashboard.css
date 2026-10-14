@@ -5,13 +5,19 @@
 }
 
 .player-content-transition {
-  opacity: 0;
-  transition: 1000ms ease;
+  position: fixed;
+  top: calc(var(--nav-top) + var(--nav-height));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateY(100dvh);
+  transition: transform 1000ms ease;
 }
 
 .player-content-transition.show {
-  opacity: 1;
-  transform: translateY(-65%);
+  transform: translateY(0);
 }
 
 .content-slider {

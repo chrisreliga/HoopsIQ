@@ -1,3 +1,8 @@
+:root {
+  --nav-top: 1dvh;
+  --nav-height: 10dvh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

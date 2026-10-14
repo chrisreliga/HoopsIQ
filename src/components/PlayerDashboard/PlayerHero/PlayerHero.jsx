@@ -13,7 +13,7 @@ export default function PlayerHero({ isScrolled, currentPlayer }) {
 
   return (
     <header>
-      <div className={isScrolled ? "player-hero scrolled" : "player-hero"}>
+      <div className={`${isScrolled ? "scrolled" : ""} player-hero`}>
         {loading && <p>Loading roster...</p>}
         {error && (
           <div className="player-hero-error">
