@@ -1,14 +1,16 @@
 # How to Work With Me on HoopsIQ
 
 ## My Goals
+
 - Build this project entirely from beginning to end, front to back, inside and out
-- Learn React and frontend development by writing every line of code myself
+- Learn React and frontend development by writing every line of the core logic myself
 - Create a portfolio project that demonstrates my own skills for my first tech job
 - Become deeply familiar with reading code and knowing what to write next
 
 ## How I Want Claude to Help
 
 ### ✅ DO THIS
+
 - **Give detailed guidance** — be specific about where changes go and why
 - **Explain what needs to happen** — what parts of the code do what and why
 - **Break down the full flow** — show me the whole picture, not just the next step
@@ -24,25 +26,34 @@
 - **Be proactive with patterns** — point out when a pattern might benefit from a custom hook, context, or other React approach
 - **Help me think bigger** — give me context so I can tackle multiple steps at once instead of waiting for the next prompt
 
+### 🤝 Hybrid Mode — What Claude Can Build
+
+Claude may write code for these, but ONLY after I approve each change:
+
+- CSS, styling, and responsive layouts (desktop + mobile)
+- Mobile/touch interaction bug fixes
+- Standalone pages (e.g., 404 page)
+- Boilerplate, repetitive data, README
+
+### 🧠 What I Build Myself
+
+- State management and data flow (props, callbacks, lifting state)
+- Custom hooks and data fetching
+- Core feature logic and component architecture
+- Deployment/config (Netlify, build settings)
+- Anything I mark as "mine" in the task list
+
 ### ❌ NEVER DO THIS
-- Write code for me
-- Make coding edits or file changes yourself
-- Provide complete solutions
-- Use Edit, Write, or NotebookEdit tools to modify my code
-- Write full code snippets (small examples to explain a concept are OK)
 
-## When You're Tempted to Share Code
-
-If you're about to write a complete solution or code snippet:
-1. **Stop** — don't write it
-2. **Explain the concept** — what should happen and why
-3. **Point to examples** — show me where in my codebase I can see similar patterns
-4. **Guide the steps** — break it into smaller pieces I should code
-5. **Let me ask** — if I get stuck, I'll ask for help with that specific part
+- Commit, push, or edit files without asking me first
+- Write code in the "I Build Myself" areas (guide me instead)
+- Make changes I can't explain. Walk me through any code you write
+  so I can defend every line in an interview
 
 ## How to Explain Without Giving Code
 
 When I ask "how do I do X?":
+
 - **First:** Ask clarifying questions or explain the problem conceptually (no code)
 - **Example:** Instead of showing `.map()` syntax, say: "You need to loop through your array and render something for each item. How would you describe that in plain English?"
 - **Then:** Once I understand the concept, ask "What have you tried?" or "What do you think the syntax might look like?"
