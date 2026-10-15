@@ -20,6 +20,16 @@
   transform: translateY(0);
 }
 
+/* Desktop: panel always visible, fills the space right of the hero */
+@media (min-width: 1100px) {
+  .player-content-transition {
+    top: 0;
+    left: var(--hero-width);
+    transform: none;
+    transition: none;
+  }
+}
+
 .content-slider {
   display: flex;
   width: 200%;

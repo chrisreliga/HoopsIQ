@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
 
 import { players } from "../../data/players.js";
+import { useMediaQuery } from "../../hooks/useMediaQuery.js";
 
 import "./PlayerDashboard.css";
 
@@ -21,6 +22,8 @@ export default function PlayerDashboard() {
   const panelRef = useRef(null);
   const isScrolledRef = useRef(false);
 
+  const isDesktop = useMediaQuery("(min-width: 1100px)");
+
   // useParams Hook
   const { playerId } = useParams();
   const currentPlayer = players.find(
@@ -29,6 +32,8 @@ export default function PlayerDashboard() {
 
   // useEffect Hook
   useEffect(() => {
+    if (isDesktop) return;
+
     window.scrollTo(0, 0);
 
     const handleWheel = (event) => {
@@ -93,7 +98,7 @@ export default function PlayerDashboard() {
 
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
     isScrolledRef.current = isScrolled;

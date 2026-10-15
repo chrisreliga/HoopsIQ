@@ -10,7 +10,7 @@ export default function PlayerContract({ contract, isScrolled }) {
         className={
           isScrolled
             ? "visible tile-container player-contract-section"
-            : "player-contract-section"
+            : "player-contract-section tile-container"
         }
       >
         <p className="player-contract-tile deal-type-tile">

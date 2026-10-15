@@ -61,6 +61,8 @@
 .roster-player-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-name {
@@ -128,8 +130,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px auto;
   font-size: 20px;
   color: #b9b9b9;
   font-family: "Orbitron";
@@ -192,6 +195,10 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px 0;
+  }
+
+  .team-roster-error {
+    grid-column: 1 / -1;
   }
 
   .avatar {

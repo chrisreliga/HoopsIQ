@@ -46,3 +46,10 @@ nav.scroll-navbar.show {
   font-size: 20px;
   font-weight: 500;
 }
+
+/* Desktop: name is already on the hero photo */
+@media (min-width: 1100px) {
+  nav.scroll-navbar {
+    display: none;
+  }
+}

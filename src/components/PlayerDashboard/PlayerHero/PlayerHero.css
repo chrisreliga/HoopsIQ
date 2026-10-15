@@ -18,7 +18,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, #0c0c0c 20%, #00000000 100%);
+  background: linear-gradient(to top, #0c0c0c 30%, #00000000 100%);
 }
 
 .player-hero.scrolled::before {
@@ -43,18 +43,13 @@
   flex-direction: column; /* stack name, team, arrow */
   align-items: center; /* center left/right */
   justify-content: flex-end; /* push to the bottom */
-  padding-bottom: 15dvh; /* lift it up from the very bottom */
+  padding-bottom: 5dvh; /* lift it up from the very bottom */
   text-align: center;
   font-size: 2rem;
 }
 
 header h1 {
   font-size: 3rem;
-}
-
-.player-hero-text .team-name {
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .scroll-down-icon {
@@ -67,23 +62,61 @@ header h1 {
   display: flex;
   flex-direction: column;
   line-height: 30px;
-  margin-bottom: 10px;
-}
-
-.team-name-container {
-  display: flex;
-  gap: 10px;
-}
-
-.team-name {
-  color: #fff;
-  font-weight: 100;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
 }
 
 .player-first-name {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 5px;
+  color: #e0c49b;
+}
+
+/* Team: flanked by fading accent lines */
+.team-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.team-name-container::before,
+.team-name-container::after {
+  content: "";
+  width: 36px;
+  height: 1px;
+}
+
+.team-name-container::before {
+  margin-right: 6px;
+  background: linear-gradient(to right, transparent, #ff6a2b);
+}
+
+.team-name-container::after {
+  margin-left: 6px;
+  background: linear-gradient(to left, transparent, #ffb36b);
+}
+
+.player-hero-text .team-name {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* City: muted */
+.team-name {
+  color: #a8a8b3;
+  font-weight: 400;
+}
+
+/* Team name: warm gradient text */
+.team-name:last-child {
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6a2b, #ffb36b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .player-hero-error {
@@ -96,4 +129,23 @@ header h1 {
   /* color: #b9b9b9; */
   color: red;
   font-family: "Orbitron";
+}
+
+/* Desktop: hero is a fixed photo column on the left */
+@media (min-width: 1100px) {
+  .player-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--hero-width);
+  }
+
+  .player-hero img {
+    object-position: top;
+  }
+
+  /* No swipe on desktop, so no swipe hint */
+  .scroll-down-icon {
+    display: none;
+  }
 }
