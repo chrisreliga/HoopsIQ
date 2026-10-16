@@ -7,6 +7,7 @@ import RateLimitCountdown from "../shared/RateLimitCountdown";
 import BackButton from "../shared/BackButton/BackButton";
 import useFetch from "../../hooks/useFetch";
 import { getGradeTone } from "../../utilities/getGradeTone.js";
+import { getErrorMessage } from "../../utilities/getErrorMessage.js";
 
 import "./RosterDashboard.css";
 
@@ -14,7 +15,7 @@ export default function RosterDashboard() {
   const playerIds = players.map((player) => player.id);
   const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
 
-  const { data, error, loading } = useFetch(
+  const { data, error, loading, status } = useFetch(
     `https://api.balldontlie.io/v1/players?per_page=100&${query}`,
   );
 
@@ -47,8 +48,8 @@ export default function RosterDashboard() {
           {loading && <p>Loading roster...</p>}
           {error && (
             <div className="full-roster-error">
-              <p>Call Limit Reached.</p>
-              <RateLimitCountdown />
+              <p>{getErrorMessage(status)}</p>
+              {status === 429 && <RateLimitCountdown />}
             </div>
           )}
           {combinedPlayers.map((player) => (

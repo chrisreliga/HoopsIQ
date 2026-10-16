@@ -4,17 +4,20 @@ export default function useFetch(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [status, setStatus] = useState(null);
 
   useEffect(() => {
     let ignore = false;
     setLoading(true);
     setError(null);
+    setStatus(null);
 
     async function load() {
       try {
         const res = await fetch(url, {
           headers: { Authorization: "940ac35f-369c-4483-9555-109472ac7f08" },
         });
+        if (!ignore) setStatus(res.status);
         if (!res.ok) throw new Error(`Request failed: ${res.status}`);
         const json = await res.json();
         if (!ignore) setData(json);
@@ -31,5 +34,5 @@ export default function useFetch(url) {
     };
   }, [url]);
 
-  return { data, loading, error };
+  return { data, loading, error, status };
 }
