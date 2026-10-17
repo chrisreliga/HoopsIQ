@@ -2,17 +2,11 @@ import "./PlayerContract.css";
 
 import { formatMoney } from "../../../utilities/formatMoney.js";
 
-export default function PlayerContract({ contract, isScrolled }) {
+export default function PlayerContract({ contract }) {
   return (
     <>
       <h2 className="section-header">Contract</h2>
-      <section
-        className={
-          isScrolled
-            ? "visible tile-container player-contract-section"
-            : "player-contract-section tile-container"
-        }
-      >
+      <section className="tile-container player-contract-section">
         <p className="player-contract-tile deal-type-tile">
           <span className="tile-label">Type of Deal:</span> {contract.type}
         </p>
