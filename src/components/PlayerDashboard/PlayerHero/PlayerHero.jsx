@@ -1,7 +1,5 @@
 import useFetch from "../../../hooks/useFetch";
-
 import RateLimitCountdown from "../../shared/RateLimitCountdown";
-
 import "./PlayerHero.css";
 
 export default function PlayerHero({ isScrolled, currentPlayer }) {
@@ -13,7 +11,7 @@ export default function PlayerHero({ isScrolled, currentPlayer }) {
 
   return (
     <header>
-      <div className={isScrolled ? "player-hero scrolled" : "player-hero"}>
+      <div className={`${isScrolled ? "scrolled" : ""} player-hero`}>
         {loading && <p>Loading roster...</p>}
         {error && (
           <div className="player-hero-error">
@@ -24,10 +22,6 @@ export default function PlayerHero({ isScrolled, currentPlayer }) {
         {apiPlayer && (
           <>
             <picture>
-              <source
-                media="(min-width: 800px)"
-                // srcSet={bio.widescreenPlayerImage}
-              />
               <img
                 src={currentPlayer.bio.playerImage}
                 alt={`${apiPlayer.first_name} ${apiPlayer.last_name}`}

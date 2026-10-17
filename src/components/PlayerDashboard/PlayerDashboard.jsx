@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
 
 import { players } from "../../data/players.js";
+import { useMediaQuery } from "../../hooks/useMediaQuery.js";
 
 import "./PlayerDashboard.css";
 
@@ -18,6 +19,10 @@ export default function PlayerDashboard() {
   const [isDeepDiveOpen, setIsDeepDiveOpen] = useState(false);
 
   const initTouch = useRef(0);
+  const panelRef = useRef(null);
+  const isScrolledRef = useRef(false);
+
+  const isDesktop = useMediaQuery("(min-width: 1100px)");
 
   // useParams Hook
   const { playerId } = useParams();
@@ -27,9 +32,19 @@ export default function PlayerDashboard() {
 
   // useEffect Hook
   useEffect(() => {
+    if (isDesktop) return;
+
     window.scrollTo(0, 0);
 
     const handleWheel = (event) => {
+      const isScrollingUp = event.deltaY < 0;
+      const isAtTop = panelRef.current.scrollTop === 0;
+
+      //If the panel is open, and you're NOT scrolling down at the top, stop here and let the panel scroll.
+      if (isScrolledRef.current && !(isScrollingUp && isAtTop)) {
+        return;
+      }
+
       event.preventDefault();
 
       const currentDeltaY = event.deltaY;
@@ -43,35 +58,51 @@ export default function PlayerDashboard() {
 
     const handleTouchStart = (event) => {
       initTouch.current = event.touches[0].clientY;
-      console.log(initTouch.current);
     };
 
     const handleTouchMove = (event) => {
-      event.preventDefault();
-
       const currPosition = event.touches[0].clientY;
 
       const swipeDistance = initTouch.current - currPosition;
+      const isSwipingDown = swipeDistance < 0;
+      const isAtTop = panelRef.current.scrollTop === 0;
 
-      console.log(swipeDistance);
+      //If the panel is open, and you're NOT swiping down at the top, stop here and let the panel scroll.
+      if (isScrolledRef.current && !(isSwipingDown && isAtTop)) {
+        return;
+      }
+
+      if (!isScrolledRef.current && isSwipingDown) {
+        return;
+      }
+
+      event.preventDefault();
 
       if (swipeDistance > 200) {
         setIsScrolled(true);
-      } else if (swipeDistance < -800) {
+      } else if (swipeDistance < -50) {
         setIsScrolled(false);
       }
     };
 
     window.addEventListener("touchstart", handleTouchStart);
+
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
+
     window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleWheel, { passive: false });
+
       window.removeEventListener("touchstart", handleTouchStart);
+
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, []);
+  }, [isDesktop]);
+
+  useEffect(() => {
+    isScrolledRef.current = isScrolled;
+  }, [isScrolled]);
 
   return (
     <main className="container">
@@ -86,6 +117,7 @@ export default function PlayerDashboard() {
       <BackButton />
 
       <div
+        ref={panelRef}
         className={
           isScrolled
             ? "content player-content-transition show"

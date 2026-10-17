@@ -1,3 +1,10 @@
+:root {
+  --nav-top: 1dvh;
+  --nav-height: 10dvh;
+  /* Desktop player hero: portrait width, capped at half the screen */
+  --hero-width: min(80dvh, 50vw);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

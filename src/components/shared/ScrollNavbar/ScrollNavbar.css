@@ -1,25 +1,30 @@
 /* ScrollNavbar Component */
-nav {
+nav.scroll-navbar {
   position: fixed;
   display: flex;
-  top: 1%;
+  top: var(--nav-top);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, calc(-100% - var(--nav-top)));
   align-items: center;
   justify-content: center;
   z-index: 2;
   width: 90vw;
-  height: 10vh;
+  height: var(--nav-height);
   gap: 2rem;
   border-radius: 22px;
-  transition: opacity 300ms ease-out;
+  transition:
+    opacity 300ms ease-out,
+    transform 300ms ease-in;
   font-size: 1.25rem;
   opacity: 0;
 }
 
-nav.show {
+nav.scroll-navbar.show {
   opacity: 1;
-  transition: opacity 600ms ease-in;
+  transform: translate(-50%, 0);
+  transition:
+    opacity 860ms ease-in,
+    transform 860ms ease-out;
 }
 
 .team-logo-container {
@@ -40,4 +45,11 @@ nav.show {
   color: #a89e87;
   font-size: 20px;
   font-weight: 500;
+}
+
+/* Desktop: name is already on the hero photo */
+@media (min-width: 1100px) {
+  nav.scroll-navbar {
+    display: none;
+  }
 }
