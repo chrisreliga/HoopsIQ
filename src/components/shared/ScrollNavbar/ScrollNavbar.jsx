@@ -5,9 +5,7 @@ import RateLimitCountdown from "../../shared/RateLimitCountdown";
 import "./ScrollNavbar.css";
 
 export default function ScrollNavbar({ currentPlayer, bio, isScrolled }) {
-  const { data, loading, error } = useFetch(
-    `https://api.balldontlie.io/v1/players/${currentPlayer.id}`,
-  );
+  const { data, loading, error } = useFetch(`players/${currentPlayer.id}`);
 
   const apiPlayer = data ? data.data : null;
 

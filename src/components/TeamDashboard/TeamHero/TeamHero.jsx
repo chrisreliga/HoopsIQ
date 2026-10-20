@@ -7,7 +7,7 @@ import { teams } from "../../../data/teams";
 import "./TeamHero.css";
 
 export default function TeamHero() {
-  const { data, error } = useFetch("https://api.balldontlie.io/v1/teams/24");
+  const { data, error } = useFetch("teams/24");
 
   const apiTeam = data ? data.data : null;
 

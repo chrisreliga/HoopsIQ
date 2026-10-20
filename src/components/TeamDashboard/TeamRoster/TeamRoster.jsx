@@ -16,7 +16,7 @@ export default function TeamRoster() {
   const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
 
   const { data, loading, error, status } = useFetch(
-    `https://api.balldontlie.io/v1/players?per_page=100&${query}`,
+    `players?per_page=100&${query}`,
   );
 
   const isMobile = useMediaQuery("(max-width: 1100px)");
