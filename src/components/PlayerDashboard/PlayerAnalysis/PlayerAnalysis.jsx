@@ -1,8 +1,8 @@
 import "./PlayerAnalysis.css";
 
-export default function PlayerAnalysis({ analysis, isScrolled }) {
+export default function PlayerAnalysis({ analysis }) {
   return (
-    <section className={isScrolled ? "visible" : ""}>
+    <section>
       <h2 className="analysis-grade">
         <span>Contract Grade:</span> {analysis.contractGrade}
       </h2>

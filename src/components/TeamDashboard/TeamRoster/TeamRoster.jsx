@@ -4,6 +4,7 @@ import { players } from "../../../data/players";
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 import { formatMoney } from "../../../utilities/formatMoney";
 import { getGradeTone } from "../../../utilities/getGradeTone";
+import { getErrorMessage } from "../../../utilities/getErrorMessage";
 
 import RateLimitCountdown from "../../shared/RateLimitCountdown";
 
@@ -14,7 +15,9 @@ export default function TeamRoster() {
 
   const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
 
-  const { data, loading, error } = useFetch(`players?per_page=100&${query}`);
+  const { data, loading, error, status } = useFetch(
+    `players?per_page=100&${query}`,
+  );
 
   const isMobile = useMediaQuery("(max-width: 1100px)");
 
@@ -44,8 +47,8 @@ export default function TeamRoster() {
         {loading && <p>Loading roster...</p>}
         {error && (
           <div className="team-roster-error">
-            <p>Call Limit Reached.</p>
-            <RateLimitCountdown />
+            <p>{getErrorMessage(status)}</p>
+            {status === 429 && <RateLimitCountdown />}
           </div>
         )}
         {visible &&

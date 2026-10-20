@@ -1,8 +1,8 @@
 import "./PlayerBio.css";
 
-export default function PlayerBio({ bio, isScrolled }) {
+export default function PlayerBio({ bio }) {
   return (
-    <section className={isScrolled ? "visible" : ""}>
+    <section>
       <h2 className="section-header">Bio</h2>
 
       <div className="player-bio-section tile-container">
