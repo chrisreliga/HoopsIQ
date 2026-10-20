@@ -12,9 +12,9 @@ export default function useFetch(url) {
 
     async function load() {
       try {
-        const res = await fetch(url, {
-          headers: { Authorization: "940ac35f-369c-4483-9555-109472ac7f08" },
-        });
+        const res = await fetch(
+          `/.netlify/functions/nba-api?path=${encodeURIComponent(url)}`,
+        );
         if (!res.ok) throw new Error(`Request failed: ${res.status}`);
         const json = await res.json();
         if (!ignore) setData(json);

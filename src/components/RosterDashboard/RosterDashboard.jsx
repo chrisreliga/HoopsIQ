@@ -14,9 +14,7 @@ export default function RosterDashboard() {
   const playerIds = players.map((player) => player.id);
   const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
 
-  const { data, error, loading } = useFetch(
-    `https://api.balldontlie.io/v1/players?per_page=100&${query}`,
-  );
+  const { data, error, loading } = useFetch(`players?per_page=100&${query}`);
 
   const apiPlayers = data ? data.data : null;
 

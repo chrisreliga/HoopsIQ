@@ -3,9 +3,7 @@ import RateLimitCountdown from "../../shared/RateLimitCountdown";
 import "./PlayerHero.css";
 
 export default function PlayerHero({ isScrolled, currentPlayer }) {
-  const { data, loading, error } = useFetch(
-    `https://api.balldontlie.io/v1/players/${currentPlayer.id}`,
-  );
+  const { data, loading, error } = useFetch(`players/${currentPlayer.id}`);
 
   const apiPlayer = data ? data.data : null;
 
