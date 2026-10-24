@@ -1,38 +1,23 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 export default function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [status, setStatus] = useState(null);
-
-  useEffect(() => {
-    let ignore = false;
-    setLoading(true);
-    setError(null);
-    setStatus(null);
-
-    async function load() {
-      try {
-        const res = await fetch(
-          `/.netlify/functions/nba-api?path=${encodeURIComponent(url)}`,
-        );
-        if (!ignore) setStatus(res.status);
-        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
-        const json = await res.json();
-        if (!ignore) setData(json);
-      } catch (err) {
-        if (!ignore) setError(err);
-      } finally {
-        if (!ignore) setLoading(false);
+  const { data, isPending, error } = useQuery({
+    queryKey: [url],
+    queryFn: async () => {
+      const res = await fetch(
+        `/.netlify/functions/nba-api?path=${encodeURIComponent(url)}`,
+      );
+      if (!res.ok) {
+        const err = new Error(`Request failed: ${res.status}`);
+        err.status = res.status;
+        throw err;
       }
-    }
+      return res.json();
+    },
 
-    load();
-    return () => {
-      ignore = true;
-    };
-  }, [url]);
+    staleTime: 1000 * 60 * 60,
+    retry: (failureCount, err) => err.status !== 429 && failureCount < 2,
+  });
 
-  return { data, loading, error, status };
+  return { data, loading: isPending, error, status: error?.status };
 }
