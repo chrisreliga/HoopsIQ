@@ -6,7 +6,7 @@ import "./TeamFinances.css";
 
 export default function TeamFinances() {
   return (
-    <section className="team-finance-section">
+    <section className="team-section team-finance-section">
       <div className="team-finance-header-flexbox">
         <h2 className="team-finance-header">The Money</h2>
         <p className="team-finance-subheader">

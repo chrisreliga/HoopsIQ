@@ -1,0 +1,77 @@
+:root {
+  /* Team Colors: override these per team */
+  --team-primary: #ff3c00;
+  --team-primary-light: #ff6d2f;
+  --team-secondary: #8b6cff;
+  --team-tertiary: #e0c49b;
+  --team-tertiary-light: #efdeb2;
+  --team-highlight: #ffb36b;
+
+  /* Team Background */
+  --team-bg-base: #0f0c0b;
+  --team-bg-glow-primary: rgba(197, 64, 34, 0.18);
+  --team-bg-glow-secondary: rgba(61, 34, 197, 0.12);
+
+  /* Base */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-bg-panel: #121214;
+  --color-overlay: #000000dd;
+  --color-hero-fade: #0c0c0c;
+
+  /* Text */
+  --color-text: #ededf1;
+  --color-text-strong: var(--color-white);
+  --color-text-muted: #b9b9b9;
+  --color-text-subtle: #8d8d95;
+  --color-text-faint: #6f6f78;
+  --color-text-warm: #a89e87;
+  --color-text-highlight: #f6e6dc;
+
+  /* Surfaces */
+  --color-surface: rgba(255, 255, 255, 0.122);
+  --color-surface-subtle: rgba(255, 255, 255, 0.06);
+  --color-surface-strong: rgba(255, 255, 255, 0.15);
+  --color-surface-gray: rgba(100, 100, 100, 0.2);
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-glass: rgba(127, 127, 127, 0.3);
+  --color-border-panel: rgba(105, 105, 105, 0.3);
+  --color-divider: rgb(70, 69, 69);
+
+  /* Glass Card */
+  --gradient-glass: linear-gradient(
+    90deg,
+    rgba(52, 60, 69, 0.35) 0%,
+    rgba(35, 27, 56, 0.35) 50%,
+    rgba(25, 10, 56, 0.35) 100%
+  );
+  --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-text: 0 2px 16px rgba(0, 0, 0, 0.5);
+
+  /* Status: tint with color-mix() for backgrounds and borders */
+  --color-success: #7fe3a1;
+  --color-warning: #ffb765;
+  --color-danger: #ff7a6b;
+  --color-neutral: #808080;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Font Sizes (1rem = 16px) */
+  --font-2xs: 0.625rem; /* 10px */
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-md: 1rem; /* 16px */
+  --font-lg: 1.125rem; /* 18px */
+  --font-xl: 1.25rem; /* 20px */
+  --font-2xl: 1.5rem; /* 24px */
+  --font-3xl: 1.75rem; /* 28px */
+  --font-4xl: 2rem; /* 32px */
+  --font-5xl: 2.5rem; /* 40px */
+  --font-6xl: 3rem; /* 48px */
+}

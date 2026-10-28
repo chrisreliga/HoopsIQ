@@ -14,20 +14,27 @@
   overflow-y: auto;
   transform: translateY(100dvh);
   transition: transform 1000ms ease;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 30% 0%,
+      var(--team-bg-glow-primary),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 100%,
+      var(--team-bg-glow-secondary),
+      transparent 70%
+    ),
+    var(--team-bg-base);
+}
+
+/* Overrides the shared .content border (App.css) for the player panel only */
+.content.player-content-transition {
+  border-color: var(--color-border-glass);
 }
 
 .player-content-transition.show {
   transform: translateY(0);
-}
-
-/* Desktop: panel always visible, fills the space right of the hero */
-@media (min-width: 1100px) {
-  .player-content-transition {
-    top: 0;
-    left: var(--hero-width);
-    transform: none;
-    transition: none;
-  }
 }
 
 .content-slider {
@@ -46,20 +53,20 @@
 }
 
 .player-content-transition span {
-  color: #b9b9b9;
+  color: var(--color-text-muted);
 }
 
 .section-header {
   margin: 12px 22px 10px;
-  font-size: 0.89rem;
+  font-size: var(--font-sm);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6f6f78;
+  color: var(--color-text-faint);
   font-weight: 600;
 }
 
 .tile-label {
-  font-size: 0.75rem;
+  font-size: var(--font-xs);
   font-weight: 300;
 }
 
@@ -71,16 +78,21 @@
   margin: 1rem;
   padding: 0.75rem;
   width: calc(100% - 2rem);
-  font-size: 1.25rem;
-  color: #e0c49b;
-  background: linear-gradient(
-    90deg,
-    rgba(52, 60, 69, 0.35) 0%,
-    rgba(35, 27, 56, 0.35) 50%,
-    rgba(25, 10, 56, 0.35) 100%
-  );
+  font-size: var(--font-xl);
+  color: var(--team-tertiary);
+  background: var(--gradient-glass);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(127, 127, 127, 0.3);
-  border-radius: 22px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+/* Desktop: panel always visible, fills the space right of the hero */
+@media (min-width: 1100px) {
+  .player-content-transition {
+    top: 0;
+    left: var(--hero-width);
+    transform: none;
+    transition: none;
+  }
 }

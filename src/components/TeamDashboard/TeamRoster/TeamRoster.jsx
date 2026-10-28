@@ -35,7 +35,7 @@ export default function TeamRoster() {
   const visible = isMobile ? mobileTeamRoster : combinedPlayers;
 
   return (
-    <section className="team-roster-section">
+    <section className="team-section team-roster-section">
       <div className="team-roster-header-styles">
         <h2 className="team-roster-header">Roster</h2>
         <p className="team-roster-subheader">

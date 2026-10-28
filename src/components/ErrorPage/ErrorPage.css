@@ -1,4 +1,11 @@
 .error-page {
+  /* Scoped tokens: the 404 page has its own look */
+  --error-bg: #63cdc7;
+  --error-ink: #1a1a1a;
+  --error-text: #333333;
+  --error-court-line: color-mix(in srgb, var(--team-primary) 12%, transparent);
+  --error-ball-shadow: rgba(0, 0, 0, 0.2);
+
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -7,9 +14,8 @@
   gap: 0.75rem;
   padding: 1rem;
   text-align: center;
-  background: #f2efe8;
-  background: #63cdc7;
-  color: #1a1a1a;
+  background: var(--error-bg);
+  color: var(--error-ink);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +33,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: rgba(255, 60, 0, 0.12);
+  background: var(--error-court-line);
 }
 
 .error-page::after {
@@ -35,7 +41,7 @@
   left: 50%;
   width: 320px;
   height: 320px;
-  border: 4px solid rgba(255, 60, 0, 0.12);
+  border: 4px solid var(--error-court-line);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -58,7 +64,7 @@
 
 .error-page-ball {
   font-size: 4rem;
-  color: #ff3c00;
+  color: var(--team-primary);
   animation: bounce 0.9s ease-in infinite alternate;
 }
 
@@ -67,7 +73,7 @@
   height: 10px;
   margin-top: 6px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--error-ball-shadow);
   animation: shadow 0.9s ease-in infinite alternate;
 }
 
@@ -99,27 +105,27 @@
   font-size: clamp(3rem, 14vw, 6rem);
   line-height: 1;
   text-transform: uppercase;
-  color: #ff3c00;
-  text-shadow: 5px 5px 0 #1a1a1a;
+  color: var(--team-primary);
+  text-shadow: 5px 5px 0 var(--error-ink);
   transform: rotate(-4deg);
 }
 
 .error-page-text {
   max-width: 340px;
-  font-size: 1.1rem;
-  color: #333333;
+  font-size: var(--font-lg);
+  color: var(--error-text);
 }
 
 .error-page-link {
   margin-top: 1.25rem;
   padding: 0.9rem 2rem;
-  border: 3px solid #1a1a1a;
-  border-radius: 999px;
-  background: #ff3c00;
-  color: #ffffff;
+  border: 3px solid var(--error-ink);
+  border-radius: var(--radius-pill);
+  background: var(--team-primary);
+  color: var(--color-white);
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 4px 4px 0 #1a1a1a;
+  box-shadow: 4px 4px 0 var(--error-ink);
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease;
@@ -127,12 +133,12 @@
 
 .error-page-link:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #1a1a1a;
+  box-shadow: 6px 6px 0 var(--error-ink);
 }
 
 .error-page-link:active {
   transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1a1a1a;
+  box-shadow: 0 0 0 var(--error-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

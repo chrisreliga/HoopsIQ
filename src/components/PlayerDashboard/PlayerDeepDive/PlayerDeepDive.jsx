@@ -1,3 +1,5 @@
+import "./PlayerDeepDive.css";
+
 export default function PlayerDeepDive({
   currentPlayer,
   isDeepDiveOpen,
@@ -25,7 +27,7 @@ export default function PlayerDeepDive({
           className="back-btn"
           onClick={() => setIsDeepDiveOpen(!isDeepDiveOpen)}
         >
-          <i className="fa-solid fa-chevron-left"></i>Back to Player
+          <i className="fa-solid fa-chevron-left"></i>Player Dashboard
         </button>
       </div>
     </div>

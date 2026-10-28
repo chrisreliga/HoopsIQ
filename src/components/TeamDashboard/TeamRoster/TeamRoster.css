@@ -1,21 +1,16 @@
-.team-roster-section {
-  margin: 0 26px;
-  text-align: center;
-}
-
 .team-roster-header-styles {
   text-align: center;
 }
 
 .team-roster-header {
-  color: #ededf1;
-  font-size: 22px;
+  color: var(--color-text);
+  font-size: var(--font-2xl);
   font-weight: 500;
 }
 
 .team-roster-subheader {
-  font-size: 14px;
-  color: #8d8d95;
+  font-size: var(--font-sm);
+  color: var(--color-text-subtle);
   margin-bottom: 12px;
 }
 
@@ -30,13 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 22px;
-  background: linear-gradient(rgba(255, 255, 255, 0.122));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
   backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: var(--shadow-card);
   text-decoration: none;
-  color: #ff3c00;
+  color: var(--team-primary);
 }
 
 .avatar {
@@ -45,8 +40,8 @@
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,22 +61,22 @@
 }
 
 .avatar-name {
-  font-size: 16px;
+  font-size: var(--font-md);
   font-weight: 600;
-  color: #ededf1;
+  color: var(--color-text);
 }
 
 .avatar-position-age {
-  color: #b9b9b9;
-  font-size: 14px;
+  color: var(--color-text-muted);
+  font-size: var(--font-sm);
   display: flex;
   align-items: center;
   gap: 2px;
 }
 
 .avatar-salary {
-  color: #e0c49b;
-  font-size: 14px;
+  color: var(--team-tertiary);
+  font-size: var(--font-sm);
 }
 
 .avatar-grade-container {
@@ -94,14 +89,14 @@
 .avatar-grade {
   width: 38px;
   height: 38px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: var(--font-lg);
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
 }
 
 .full-roster-link {
@@ -112,18 +107,15 @@
   margin: 30px 0;
   width: 100%;
   height: 52px;
-  border-radius: 999px;
-  font-size: 17px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-lg);
   font-weight: 500;
-  color: #f6e6dc;
-  background: linear-gradient(
-    135deg,
-    rgba(229, 95, 32, 0.16),
-    rgba(255, 255, 255, 0.04) 60%
-  );
-  border: 1px solid rgba(255, 180, 140, 0.22);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(18px) saturate(160%);
+  color: var(--team-tertiary);
+  background: var(--gradient-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
 
 .team-roster-error {
@@ -133,53 +125,47 @@
   justify-content: center;
   width: 100%;
   margin: 20px auto;
-  font-size: 20px;
-  color: #b9b9b9;
+  font-size: var(--font-xl);
+  color: var(--color-text-muted);
   font-family: "Orbitron";
 }
 
 .good-grade-container {
-  background: rgba(127, 227, 160, 0.102);
-  border: 0.5px solid #7fe3a1;
+  background: color-mix(in srgb, var(--color-success) 10%, transparent);
+  border: 0.5px solid var(--color-success);
 }
 .good-grade {
-  color: #7fe3a1;
+  color: var(--color-success);
 }
 
 .okay-grade-container {
-  background: rgba(255, 183, 101, 0.102);
-  border: 0.5px solid #ffb765;
+  background: color-mix(in srgb, var(--color-warning) 10%, transparent);
+  border: 0.5px solid var(--color-warning);
 }
 .okay-grade {
-  color: #ffb765;
+  color: var(--color-warning);
 }
 
 .bad-grade-container {
-  background: rgba(255, 122, 107, 0.102);
-  border: 0.5px solid #ff7a6b;
+  background: color-mix(in srgb, var(--color-danger) 10%, transparent);
+  border: 0.5px solid var(--color-danger);
 }
 .bad-grade {
-  color: #ff7a6b;
+  color: var(--color-danger);
 }
 
 .neutral-grade-container {
-  background: rgba(128, 128, 128, 0.102);
-  border: 0.5px solid gray;
+  background: color-mix(in srgb, var(--color-neutral) 10%, transparent);
+  border: 0.5px solid var(--color-neutral);
 }
 .neutral-grade {
-  color: gray;
+  color: var(--color-neutral);
 }
 
 @media (min-width: 600px) {
   .roster-player-info {
     flex-direction: row;
     gap: 12px;
-  }
-}
-
-@media (min-width: 800px) {
-  .team-roster-section {
-    margin-inline: 200px 200px;
   }
 }
 
@@ -212,21 +198,21 @@
   }
 
   .avatar-name {
-    font-size: 22px;
+    font-size: var(--font-2xl);
   }
 
   .avatar-position-age {
-    font-size: 18px;
+    font-size: var(--font-lg);
   }
 
   .avatar-salary {
-    font-size: 18px;
+    font-size: var(--font-lg);
   }
 
   .avatar-grade {
     width: 54px;
     height: 54px;
-    font-size: 24px;
+    font-size: var(--font-2xl);
   }
 
   .team-roster-grade-arrow {
@@ -235,11 +221,5 @@
 
   .full-roster-btn {
     display: none;
-  }
-}
-
-@media (min-width: 1500px) {
-  .team-roster-section {
-    margin-inline: 400px 400px;
   }
 }
