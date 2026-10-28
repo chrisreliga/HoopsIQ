@@ -37,71 +37,78 @@ export default function RosterDashboard() {
 
   return (
     <>
-      <BackButton />
+      <div className="roster-dashboard-bg">
+        <BackButton />
 
-      <section className="roster-dashboard">
-        <div className="fullRoster-header-styles">
-          <h2 className="team-full-roster-header">Roster</h2>
-          <p className="team-roster-subheader">
-            Tap a player for the full breakdown
-          </p>
-        </div>
+        <section className="roster-dashboard">
+          <div className="fullRoster-header-styles">
+            <h2 className="team-full-roster-header">Roster</h2>
+            <p className="team-roster-subheader">
+              Tap a player for the full breakdown
+            </p>
+          </div>
 
-        <RosterStats />
+          <RosterStats />
 
-        <RosterSorting activeSort={activeSort} setActiveSort={setActiveSort} />
+          <RosterSorting
+            activeSort={activeSort}
+            setActiveSort={setActiveSort}
+          />
 
-        <div className="full-roster team-roster-tile-container ">
-          {loading && <p>Loading roster...</p>}
-          {error && (
-            <div className="full-roster-error">
-              <p>{getErrorMessage(status)}</p>
-              {status === 429 && <RateLimitCountdown />}
-            </div>
-          )}
-          {sortedPlayers.map((player) => (
-            <Link
-              to={`/player/${player.id}`}
-              className="team-roster-tile"
-              key={player.api?.id}
-            >
-              <div className="avatar">
-                <img
-                  src={player.bio.playerIcon}
-                  alt={`${player.api?.first_name} ${player.api?.last_name}`}
-                  className="avatar-img"
-                />
+          <div className="full-roster team-roster-tile-container ">
+            {loading && <p>Loading roster...</p>}
+            {error && (
+              <div className="full-roster-error">
+                <p>{getErrorMessage(status)}</p>
+                {status === 429 && <RateLimitCountdown />}
               </div>
-              <div className="roster-player-info">
-                <h4
-                  className="avatar-name
+            )}
+            {sortedPlayers.map((player) => (
+              <Link
+                to={`/player/${player.id}`}
+                className="team-roster-tile"
+                key={player.api?.id}
+              >
+                <div className="avatar">
+                  <img
+                    src={player.bio.playerIcon}
+                    alt={`${player.api?.first_name} ${player.api?.last_name}`}
+                    className="avatar-img"
+                  />
+                </div>
+                <div className="roster-player-info">
+                  <h4
+                    className="avatar-name
             "
-                >
-                  {`${player.api?.first_name} ${player.api?.last_name}`}
-                </h4>
-                <p className="avatar-position-age">
-                  {player.position} {""}
-                  <i className="fa-solid fa-circle dot-separator"></i> Age {""}
-                  {player.bio.age}
-                </p>
-                <p className="avatar-salary">
-                  ${player.contract.salary.toLocaleString()} / yr {""}
-                  <i className="fa-solid fa-circle dot-separator"></i> thru {""}
-                  {player.contract.endYear}
-                </p>
-              </div>
-              <div className="avatar-grade-container">
-                <p
-                  className={`avatar-grade ${getGradeTone(player.analysis.contractGrade)}`}
-                >
-                  {player.analysis.contractGrade}
-                </p>
-                <i className="fa-solid fa-chevron-right right-arrow"></i>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+                  >
+                    {`${player.api?.first_name} ${player.api?.last_name}`}
+                  </h4>
+                  <p className="avatar-position-age">
+                    {player.position} {""}
+                    <i className="fa-solid fa-circle dot-separator"></i> Age{" "}
+                    {""}
+                    {player.bio.age}
+                  </p>
+                  <p className="avatar-salary">
+                    ${player.contract.salary.toLocaleString()} / yr {""}
+                    <i className="fa-solid fa-circle dot-separator"></i> thru{" "}
+                    {""}
+                    {player.contract.endYear}
+                  </p>
+                </div>
+                <div className="avatar-grade-container">
+                  <p
+                    className={`avatar-grade ${getGradeTone(player.analysis.contractGrade)}`}
+                  >
+                    {player.analysis.contractGrade}
+                  </p>
+                  <i className="fa-solid fa-chevron-right right-arrow"></i>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
     </>
   );
 }

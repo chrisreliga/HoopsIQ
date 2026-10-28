@@ -2,4 +2,35 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-height: 100dvh;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 30% 0%,
+      var(--team-bg-glow-primary),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 100%,
+      var(--team-bg-glow-secondary),
+      transparent 70%
+    ),
+    var(--team-bg-base);
+}
+
+/* Shared layout for TeamGrade, TeamRoster, TeamFinances */
+.team-section {
+  margin: 0 26px;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .team-section {
+    margin-inline: 200px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .team-section {
+    margin-inline: 400px;
+  }
 }

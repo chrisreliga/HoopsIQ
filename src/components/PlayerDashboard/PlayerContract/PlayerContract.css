@@ -6,13 +6,13 @@
   display: flex;
   flex-direction: column;
   padding: 0.7rem 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.122));
+  background: var(--color-surface);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  color: #ededf1;
-  font-size: 18px;
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  color: var(--color-text);
+  font-size: var(--font-lg);
   font-weight: 700;
 }
 
@@ -21,5 +21,5 @@
 }
 
 .accent-orange {
-  color: #ff6d2f;
+  color: var(--team-primary-light);
 }

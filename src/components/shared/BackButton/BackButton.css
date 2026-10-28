@@ -7,21 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #efdeb2;
-  background: linear-gradient(
-    90deg,
-    rgba(52, 60, 69, 0.35) 0%,
-    rgba(35, 27, 56, 0.35) 50%,
-    rgba(25, 10, 56, 0.35) 100%
-  );
+  color: var(--team-tertiary-light);
+  background: var(--gradient-glass);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(127, 127, 127, 0.3);
+  border: 1px solid var(--color-border-glass);
   border-radius: 50%;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: var(--shadow-card);
   z-index: 100;
   text-decoration: none;
 }
 
 .previous-screen-btn {
-  font-size: 14px;
+  font-size: var(--font-sm);
 }

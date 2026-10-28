@@ -9,7 +9,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #000000dd;
+  background: var(--color-overlay);
   opacity: 0;
   transition: opacity 600ms ease-out;
 }
@@ -18,7 +18,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, #0c0c0c 30%, #00000000 100%);
+  background: linear-gradient(
+    to top,
+    var(--color-hero-fade) 30%,
+    transparent 100%
+  );
 }
 
 .player-hero.scrolled::before {
@@ -45,32 +49,32 @@
   justify-content: flex-end; /* push to the bottom */
   padding-bottom: 5dvh; /* lift it up from the very bottom */
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--font-4xl);
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: var(--font-6xl);
 }
 
 .scroll-down-icon {
-  color: #fff;
+  color: var(--color-text-strong);
 }
 
 .player-name {
-  color: #fff;
+  color: var(--color-text-strong);
   font-weight: 300;
   display: flex;
   flex-direction: column;
   line-height: 30px;
   margin-bottom: 14px;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--shadow-text);
 }
 
 .player-first-name {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: var(--font-lg);
   letter-spacing: 5px;
-  color: #e0c49b;
+  color: var(--team-tertiary);
 }
 
 /* Team: flanked by fading accent lines */
@@ -90,30 +94,34 @@ header h1 {
 
 .team-name-container::before {
   margin-right: 6px;
-  background: linear-gradient(to right, transparent, #ff6a2b);
+  background: linear-gradient(to right, transparent, var(--team-primary-light));
 }
 
 .team-name-container::after {
   margin-left: 6px;
-  background: linear-gradient(to left, transparent, #ffb36b);
+  background: linear-gradient(to left, transparent, var(--team-highlight));
 }
 
 .player-hero-text .team-name {
-  font-size: 0.85rem;
+  font-size: var(--font-sm);
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
 
 /* City: muted */
 .team-name {
-  color: #a8a8b3;
+  color: var(--color-text-muted);
   font-weight: 400;
 }
 
 /* Team name: warm gradient text */
 .team-name:last-child {
   font-weight: 700;
-  background: linear-gradient(90deg, #ff6a2b, #ffb36b);
+  background: linear-gradient(
+    90deg,
+    var(--team-primary-light),
+    var(--team-highlight)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -125,9 +133,8 @@ header h1 {
   align-items: center;
   width: 100%;
   margin-top: 20px;
-  font-size: 20px;
-  /* color: #b9b9b9; */
-  color: red;
+  font-size: var(--font-xl);
+  color: var(--color-text-muted);
   font-family: "Orbitron";
 }
 

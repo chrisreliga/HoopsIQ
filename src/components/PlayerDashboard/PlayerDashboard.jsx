@@ -118,11 +118,9 @@ export default function PlayerDashboard() {
 
       <div
         ref={panelRef}
-        className={
-          isScrolled
-            ? "content player-content-transition show"
-            : "content player-content-transition"
-        }
+        className={`content player-content-transition ${
+          isScrolled ? "show" : ""
+        }`}
       >
         <div className={`content-slider ${isDeepDiveOpen ? "show" : ""}`}>
           <div className="main-content">
