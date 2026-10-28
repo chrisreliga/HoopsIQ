@@ -1,18 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { players } from "../../data/players";
 
 import RosterStats from "./RosterStats/RosterStats.jsx";
-import RosterFilters from "./RosterFilters/RosterFilters.jsx";
+import RosterSorting from "./RosterSorting/RosterSorting.jsx";
 import RateLimitCountdown from "../shared/RateLimitCountdown";
 import BackButton from "../shared/BackButton/BackButton";
 import useFetch from "../../hooks/useFetch";
 import { getGradeTone } from "../../utilities/getGradeTone.js";
 import { getErrorMessage } from "../../utilities/getErrorMessage.js";
+import { sortRoster } from "../../utilities/sortRoster.js";
 
 import "./RosterDashboard.css";
 
 export default function RosterDashboard() {
+  const [activeSort, setActiveSort] = useState(null);
+
   const playerIds = players.map((player) => player.id);
+
   const query = playerIds.map((id) => `player_ids[]=${id}`).join("&");
 
   const { data, error, loading, status } = useFetch(
@@ -28,6 +33,8 @@ export default function RosterDashboard() {
       })
     : [];
 
+  const sortedPlayers = sortRoster(combinedPlayers, activeSort);
+
   return (
     <>
       <BackButton />
@@ -42,7 +49,7 @@ export default function RosterDashboard() {
 
         <RosterStats />
 
-        <RosterFilters />
+        <RosterSorting activeSort={activeSort} setActiveSort={setActiveSort} />
 
         <div className="full-roster team-roster-tile-container ">
           {loading && <p>Loading roster...</p>}
@@ -52,7 +59,7 @@ export default function RosterDashboard() {
               {status === 429 && <RateLimitCountdown />}
             </div>
           )}
-          {combinedPlayers.map((player) => (
+          {sortedPlayers.map((player) => (
             <Link
               to={`/player/${player.id}`}
               className="team-roster-tile"

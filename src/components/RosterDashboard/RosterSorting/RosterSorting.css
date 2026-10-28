@@ -1,11 +1,11 @@
-.roster-filters-container {
+.roster-sorting-container {
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 20px 0;
 }
 
-.roster-filter-pill {
+.roster-sorting-pill {
   font-size: 13px;
   padding: 7px 13px;
   border-radius: 999px;
@@ -14,4 +14,8 @@
   cursor: pointer;
   white-space: nowrap;
   background: none;
+}
+
+.roster-sorting-pill.active {
+  border: 1px solid orange;
 }
