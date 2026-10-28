@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@netlify/functions": "^6.0.2",
+    "@tanstack/react-query": "^5.104.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router": "^8.3.1"
@@ -19,6 +20,7 @@
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@tanstack/react-query-devtools": "^5.104.5",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^10.6.0",
     "eslint-plugin-react-hooks": "^7.1.1",
