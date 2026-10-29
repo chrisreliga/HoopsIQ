@@ -1,34 +1,52 @@
 import SunsLogo from "../assets/sunslogo.png";
 
-import devinBookerAvatar from "../assets/devinBookerAvatar.avif";
-import devinBookerDashboard from "../assets/devinbooker.jpg";
-import widescreenBook from "../assets/widescreenBook.jpg";
+import devinBookerAvatar from "../assets/devin-booker-avatar.avif";
+import devinBookerDashboard from "../assets/devin-booker.avif";
 
-import dillonBrooksAvatar from "../assets/dillonBrooksAvatar.avif";
-import dillonBrooksImage from "../assets/dillonbrooks.jpg";
+import dillonBrooksAvatar from "../assets/dillon-brooks-avatar.avif";
+import dillonBrooksImage from "../assets/dillon-brooks.jpg";
 
-import jalenGreenAvatar from "../assets/jalenGreenAvatar.webp";
-import jalenGreenDashboard from "../assets/jalengreen.jpg";
+import jalenGreenAvatar from "../assets/jalen-green-avatar.webp";
+import jalenGreenDashboard from "../assets/jalen-green.webp";
 
-import milesBridgesAvatar from "../assets/milesBridgesAvatar.webp";
+import milesBridgesAvatar from "../assets/miles-bridges-avatar.webp";
+import milesBridgesDashboard from "../assets/miles-bridges.jpg";
 
-import markWilliamsAvatar from "../assets/markWilliamsAvatar.avif";
+import markWilliamsAvatar from "../assets/mark-williams-avatar.avif";
+import markWilliamsDashboard from "../assets/mark-williams.jpg";
 
-import collinGillespieAvatar from "../assets/collinGillespieAvatar.avif";
+import collinGillespieAvatar from "../assets/collin-gillespie-avatar.avif";
+import collinGillespieDashboard from "../assets/collin-gillespie.jpg";
 
-import khamanMaluachAvatar from "../assets/khamanMaluachAvatar.avif";
+import khamanMaluachAvatar from "../assets/khaman-maluach-avatar.avif";
+import khamanMaluachDashboard from "../assets/khaman-maluach.jpg";
 
-import ryanDunnAvatar from "../assets/ryanDunnAvatar.avif";
+import ryanDunnAvatar from "../assets/ryan-dunn-avatar.avif";
+import ryanDunnDashboard from "../assets/ryan-dunn.jpg";
 
-import osoIghodaroAvatar from "../assets/osoIghodaroAvatar.avif";
+import osoIghodaroAvatar from "../assets/oso-ighodaro-avatar.avif";
+import osoIghodaroDashboard from "../assets/oso-ighodaro.jpg";
 
-import lukeKennardAvatar from "../assets/lukeKennardAvatar.avif";
+import lukeKennardAvatar from "../assets/luke-kennard-avatar.avif";
+import lukeKennardDashboard from "../assets/luke-kennard.jpg";
 
-import rasheerFlemingAvatar from "../assets/rasheerFlemingAvatar.avif";
+import rasheerFlemingAvatar from "../assets/rasheer-fleming-avatar.avif";
+import rasheerFlemingDashboard from "../assets/rasheer-fleming.webp";
 
-import jordanGoodwinAvatar from "../assets/jordanGoodwinAvatar.avif";
+import jordanGoodwinAvatar from "../assets/jordan-goodwin-avatar.avif";
+import jordanGoodwinDashboard from "../assets/jordan-goodwin.jpg";
 
-import haywoodHighsmithAvatar from "../assets/haywoodHighsmithAvatar.avif";
+import jamareeBouyeaAvatar from "../assets/jamaree-bouyea-avatar.avif";
+import jamareeBouyeaDashboard from "../assets/jamaree-bouyea.jpg";
+
+import koaPeatAvatar from "../assets/koa-peat-avatar.avif";
+import koaPeatDashboard from "../assets/koa-peat.avif";
+
+import patSpencerAvatar from "../assets/pat-spencer-avatar.avif";
+import patSpencerDashboard from "../assets/pat-spencer.avif";
+
+import duopReathAvatar from "../assets/duop-reath-avatar.avif";
+import duopReathDashboard from "../assets/duop-reath.jpg";
 
 const devinBooker = {
   sport: "NBA",
@@ -37,8 +55,7 @@ const devinBooker = {
 
   bio: {
     playerImage: devinBookerDashboard,
-    widescreenPlayerImage: widescreenBook,
-    playerIcon: devinBookerAvatar,
+    playerAvatar: devinBookerAvatar,
     teamLogo: SunsLogo,
     age: 29,
     height: "6'5\"",
@@ -73,8 +90,7 @@ const dillonBrooks = {
 
   bio: {
     playerImage: dillonBrooksImage,
-    // widescreenPlayerImage: widescreenBook,
-    playerIcon: dillonBrooksAvatar,
+    playerAvatar: dillonBrooksAvatar,
     teamLogo: SunsLogo,
     age: 30,
     height: "6'7\"",
@@ -109,8 +125,7 @@ const jalenGreen = {
 
   bio: {
     playerImage: jalenGreenDashboard,
-    // widescreenPlayerImage: widescreenBook,
-    playerIcon: jalenGreenAvatar,
+    playerAvatar: jalenGreenAvatar,
     teamLogo: SunsLogo,
     age: 24,
     height: "6'4\"",
@@ -144,9 +159,8 @@ const milesBridges = {
   position: "PF",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: milesBridgesAvatar,
+    playerImage: milesBridgesDashboard,
+    playerAvatar: milesBridgesAvatar,
     teamLogo: SunsLogo,
     age: 28,
     height: "6'7\"",
@@ -181,9 +195,8 @@ const markWilliams = {
   position: "C",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: markWilliamsAvatar,
+    playerImage: markWilliamsDashboard,
+    playerAvatar: markWilliamsAvatar,
     teamLogo: SunsLogo,
     age: 24,
     height: "7'1\"",
@@ -218,9 +231,8 @@ const collinGillespie = {
   position: "PG",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: collinGillespieAvatar,
+    playerImage: collinGillespieDashboard,
+    playerAvatar: collinGillespieAvatar,
     teamLogo: SunsLogo,
     age: 27,
     height: "6'1\"",
@@ -255,9 +267,8 @@ const khamanMaluach = {
   position: "C",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: khamanMaluachAvatar,
+    playerImage: khamanMaluachDashboard,
+    playerAvatar: khamanMaluachAvatar,
     teamLogo: SunsLogo,
     age: 20,
     height: "7'1\"",
@@ -291,9 +302,8 @@ const ryanDunn = {
   position: "SF",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: ryanDunnAvatar,
+    playerImage: ryanDunnDashboard,
+    playerAvatar: ryanDunnAvatar,
     teamLogo: SunsLogo,
     age: 23,
     height: "6'7\"",
@@ -327,9 +337,8 @@ const osoIghodaro = {
   position: "PF",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: osoIghodaroAvatar,
+    playerImage: osoIghodaroDashboard,
+    playerAvatar: osoIghodaroAvatar,
     teamLogo: SunsLogo,
     age: 24,
     height: "6'11\"",
@@ -363,9 +372,8 @@ const lukeKennard = {
   position: "SG",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: lukeKennardAvatar,
+    playerImage: lukeKennardDashboard,
+    playerAvatar: lukeKennardAvatar,
     teamLogo: SunsLogo,
     age: 30,
     height: "6'5\"",
@@ -399,9 +407,8 @@ const jordanGoodwin = {
   position: "PG",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: jordanGoodwinAvatar,
+    playerImage: jordanGoodwinDashboard,
+    playerAvatar: jordanGoodwinAvatar,
     teamLogo: SunsLogo,
     age: 27,
     height: "6'3\"",
@@ -429,15 +436,14 @@ const jordanGoodwin = {
   },
 };
 
-const haywoodHighsmith = {
+const jamareeBouyea = {
   sport: "NBA",
-  id: 3092,
-  position: "SF",
+  id: 44477062,
+  position: "G",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: haywoodHighsmithAvatar,
+    playerImage: jamareeBouyeaDashboard,
+    playerAvatar: jamareeBouyeaAvatar,
     teamLogo: SunsLogo,
     age: 29,
     height: "6'5\"",
@@ -471,9 +477,8 @@ const rasheerFleming = {
   position: "PF",
 
   bio: {
-    playerImage: null,
-    widescreenPlayerImage: null,
-    playerIcon: rasheerFlemingAvatar,
+    playerImage: rasheerFlemingDashboard,
+    playerAvatar: rasheerFlemingAvatar,
     teamLogo: SunsLogo,
     age: 22,
     height: "6'9\"",
@@ -501,6 +506,111 @@ const rasheerFleming = {
   },
 };
 
+const koaPeat = {
+  sport: "NBA",
+  id: 1091362981,
+  position: "F",
+
+  bio: {
+    playerImage: koaPeatDashboard,
+    playerAvatar: koaPeatAvatar,
+    teamLogo: SunsLogo,
+    age: 19,
+    height: "6'8\"",
+    birthplace: "Gilbert, AZ",
+    college: "Arizona",
+    yearsActive: 1,
+  },
+
+  contract: {
+    type: "First-Round Rookie Scale Contract",
+    salary: 2926800,
+    length: 4,
+    startYear: 2026,
+    endYear: 2030,
+    totalValue: 15030000,
+  },
+
+  analysis: {
+    contractRating: "Low-Risk Bet",
+    contractGrade: "B",
+    headline: "A hometown first-rounder still searching for his calling card.",
+    ddDeal: `Four years, about $15M as the 30th pick. Years three and four are team options, so Phoenix can walk away cheap`,
+    ddSkill: `Strong, physical forward who put up 14.1 points and 5.6 rebounds at Arizona. The jumper (35% from three) is still a question`,
+    ddTest: `Find one skill that sticks. His role is undecided, and a crowded frontcourt won't wait long`,
+  },
+};
+
+const patSpencer = {
+  sport: "NBA",
+  id: 795959473,
+  position: "G",
+
+  bio: {
+    playerImage: patSpencerDashboard,
+    playerAvatar: patSpencerAvatar,
+    teamLogo: SunsLogo,
+    age: 30,
+    height: "6'2\"",
+    birthplace: "Davidsonville, MD",
+    college: "Northwestern",
+    yearsActive: 4,
+  },
+
+  contract: {
+    type: "Two-Way Contract",
+    salary: 678882,
+    length: 1,
+    startYear: 2026,
+    endYear: 2027,
+    totalValue: 678882,
+  },
+
+  analysis: {
+    contractRating: "Nearly Free Depth",
+    contractGrade: "A-",
+    headline: "The ex-lacrosse star gets one more shot to stick for good.",
+    ddDeal: `One-year two-way deal, his last year of two-way eligibility. Capped at 50 games and no playoffs`,
+    ddSkill: `Steady backup guard: 7.2 points and 3.5 assists in 66 games for Golden State, shooting 35.7% from three`,
+    ddTest: `Earn a standard contract. Grayson Allen's exit opened backcourt minutes`,
+  },
+};
+
+const duopReath = {
+  sport: "NBA",
+  id: 56783340,
+  position: "C",
+
+  bio: {
+    playerImage: duopReathDashboard,
+    playerAvatar: duopReathAvatar,
+    teamLogo: SunsLogo,
+    age: 30,
+    height: "6'10\"",
+    birthplace: "Waat, South Sudan",
+    college: "LSU",
+    yearsActive: 4,
+  },
+
+  contract: {
+    type: "Two-Way Contract",
+    salary: 678882,
+    length: 1,
+    startYear: 2026,
+    endYear: 2027,
+    totalValue: 678882,
+  },
+
+  analysis: {
+    contractRating: "Emergency Big",
+    contractGrade: "B",
+    headline: "Injury insurance at center while Mark Williams heals.",
+    ddDeal: `Signed a non-guaranteed camp deal, then got converted to a two-way on Oct. 19. Almost no risk for Phoenix`,
+    ddSkill: `A stretch big who hit 41.8% from three last season, but in only 8.1 minutes a night`,
+    ddTest: `Stay healthy after last season's foot surgery, and hold the fort until Williams is back`,
+  },
+};
+
 export const players = [
   devinBooker,
   dillonBrooks,
@@ -513,6 +623,9 @@ export const players = [
   osoIghodaro,
   lukeKennard,
   jordanGoodwin,
-  haywoodHighsmith,
+  jamareeBouyea,
   rasheerFleming,
+  koaPeat,
+  patSpencer,
+  duopReath,
 ];
