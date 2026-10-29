@@ -147,6 +147,14 @@ header h1 {
     width: var(--hero-width);
   }
 
+  .player-hero::after {
+    background: linear-gradient(
+      to top,
+      var(--color-hero-fade) 20%,
+      transparent 100%
+    );
+  }
+
   .player-hero img {
     object-position: top;
   }

@@ -71,7 +71,7 @@ export default function RosterDashboard() {
               >
                 <div className="avatar">
                   <img
-                    src={player.bio.playerIcon}
+                    src={player.bio.playerAvatar}
                     alt={`${player.api?.first_name} ${player.api?.last_name}`}
                     className="avatar-img"
                   />
